@@ -1,6 +1,17 @@
 <header>
   <nav></nav>
   <h1>Bonjour</h1>
+  <span *ngIf="!userTruc.currentUser">
+
+    <a routerLink="/signup">Sign up</a>
+    <a routerLink="/login">Log in</a>
+
+  </span>
+
+  <span *ngIf="userTruc.currentUser">
+    <b>{{userTruc.currentUser.username}}</b>
+    <button (click)="logoutClick()">Log Out</button>
+  </span>
 </header>
 
 <h1>lourd</h1>

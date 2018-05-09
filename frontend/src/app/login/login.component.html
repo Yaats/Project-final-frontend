@@ -1,0 +1,19 @@
+<h2>LOGIN PAGE</h2>
+
+<form (ngSubmit)="loginSubmit()">
+  <label>
+    Email :
+    <input type="email" [(ngModel)]="formCreds.email" name="email" placeholder="a@a.a">
+
+  </label>
+  <br>
+
+  <label>
+    Password :
+    <input type="password" [(ngModel)]="formCreds.password" name="password" placeholder="*******">
+
+  </label>
+  <br>
+
+  <button (click)="loginSubmit()">Log in</button>
+</form>

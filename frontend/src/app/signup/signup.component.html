@@ -1,0 +1,33 @@
+<h2>SIGNUP PAGE</h2>
+
+<form (ngSubmit)="signinSubmit()">
+  <label>
+    Email :
+    <input type="email" [(ngModel)]="formCreds.email" name="email" placeholder="a@a.a">
+
+  </label>
+  <br>
+
+  <label>
+    Password :
+    <input type="password" [(ngModel)]="formCreds.password" name="password" placeholder="*******">
+
+  </label>
+  <br>
+
+  <label>
+    Username :
+    <input type="text" [(ngModel)]="formCreds.username" name="username" placeholder="Username">
+
+  </label>
+  <br>
+
+  <label>
+    Interested in :
+    <input type="checkbox" [(ngModel)]="formCreds.interestedIn" name="interestedIn1" value="movies"> movies
+
+  </label>
+  <br>
+
+  <button>Sign in</button>
+</form>
