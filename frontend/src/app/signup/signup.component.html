@@ -22,11 +22,16 @@
   </label>
   <br>
 
-  <label>
+  <div>
     Interested in :
-    <input type="checkbox" [(ngModel)]="formCreds.interestedIn" name="interestedIn1" value="movies"> movies
+    <label>
+      <input type="checkbox" (change)="updateInterests('movies')" name="interestedIn[0]" id="movies" value="movies"> movies
+    </label>
+    <label>
+      <input type="checkbox" (change)="updateInterests('music')" name="interestedIn[1]" id="music" value="music"> music
+    </label>
+  </div>
 
-  </label>
   <br>
 
   <button>Sign in</button>

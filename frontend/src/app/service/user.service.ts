@@ -65,7 +65,7 @@ export class User {
   username: string;
   email: string;
   password: string;
-  interestedIn: Array<string>;
+  interestedIn?: string[] = [];
 }
 
 export class LoginCredentials {
@@ -75,7 +75,7 @@ export class LoginCredentials {
 
 export class SignupCredentials {
   email: string;
-  passwort: string;
+  password: string;
   username: string;
-  interestedIn: string;
+  interestedIn: string[] = [];
 }
