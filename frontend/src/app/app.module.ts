@@ -14,6 +14,7 @@ import {EventService} from './service/event.service';
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { EventDetailComponent } from './event-detail/event-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     LoginComponent,
     SignupComponent,
     MovieDetailsComponent,
+    EventDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [UserService, MovieTvService, MusicService, EventService],
