@@ -14,8 +14,8 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
     this.apiTruc
       .getListMovie()
-      .then((result: Movie[]) => {
-        this.movies = result;
+      .then((response: any) => {
+        this.movies = response.results;
       })
       .catch(err => {
         console.log('pas de db ?? ', err);

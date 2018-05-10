@@ -1,0 +1,20 @@
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+.card-header {
+  background-color: red;
+  padding: 10px 10px;
+  overflow: scroll;
+}
+
+.card-text {
+  text-align: justify;
+}
+
+.btn {
+}
