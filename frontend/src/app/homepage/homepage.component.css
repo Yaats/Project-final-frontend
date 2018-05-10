@@ -6,15 +6,17 @@ li {
   list-style-type: none;
 }
 
+.title {
+  position: fixed;
+}
+
 .card-header {
   background-color: red;
   padding: 10px 10px;
+  margin: 10px 10px;
   overflow: scroll;
 }
 
 .card-text {
   text-align: justify;
-}
-
-.btn {
 }

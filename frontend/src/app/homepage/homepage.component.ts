@@ -15,9 +15,8 @@ export class HomepageComponent implements OnInit {
     this.apiTruc
       .getListMovie()
       .then((response: any) => {
-        console.log(response.page);
-        // this.movies = response.results;
         // for (let i = 0; i < total_pages; i++) {
+        this.movies = response.results;
         // }
       })
       .catch(err => {
