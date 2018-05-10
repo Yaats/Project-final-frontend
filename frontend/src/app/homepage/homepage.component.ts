@@ -15,7 +15,10 @@ export class HomepageComponent implements OnInit {
     this.apiTruc
       .getListMovie()
       .then((response: any) => {
-        this.movies = response.results;
+        console.log(response.page);
+        // this.movies = response.results;
+        // for (let i = 0; i < total_pages; i++) {
+        // }
       })
       .catch(err => {
         console.log('pas de db ?? ', err);

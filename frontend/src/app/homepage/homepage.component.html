@@ -1,14 +1,10 @@
-<p>
-  homepage works!
-</p>
-
 <div class="card-header">
   <h2>Trending movies</h2>
   <ul>
     <li *ngFor="let oneMovie of movies">
       <br>
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{oneMovie.poster_path}}">
+        <!-- <img class="card-img-top" src="{{oneMovie.poster_path}}"> -->
         <div class="card-body">
           <h5 class="card-title">{{oneMovie.title}}</h5>
           <p class="card-text">
