@@ -38,7 +38,4 @@ export class Movie {
   popularity: number;
   poster_path: string;
   release_date: string;
-  // ? means it's not required to have one
-  // createdAt?: Date;
-  // updatedAd?: Date;
 }
