@@ -23,7 +23,7 @@ export class MovieTvService {
 export class Movie {
   overview: string;
   vote_count: number;
-  id: number;
+  id: string;
   title: string;
   popularity: number;
   poster_path: string;
