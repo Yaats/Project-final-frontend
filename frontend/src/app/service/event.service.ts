@@ -18,6 +18,7 @@ export class Event {
   html: string;
   url: string;
   title: string;
+  realDateStart: string;
   // vote_count: number;
   // id: number;
   // title: string;
