@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MovieTvService, Movie} from '../service/movie-tv.service';
-import { EventService } from '../service/event.service';
+import { EventService, Event } from '../service/event.service';
 
 @Component({
   selector: 'app-homepage',
@@ -26,15 +26,14 @@ export class HomepageComponent implements OnInit {
         console.log('pas de db ?? ', err);
       });
 
-
-    this.apiTrac
-    .getListEvent()
-    .then((response: any) => {
-      this.events = response.data;
-      console.log(response.data);
-    })
-    .catch(err => {
-      console.log('pas de db ?? ', err);
-    });
+      this.apiTrac
+      .getListEvent()
+      .then((response: any) => {
+        this.events = response.data;
+      })
+      .catch(err => {
+        console.log('pas de db ?? ', err);
+      });
+      
+    }
   }
-}

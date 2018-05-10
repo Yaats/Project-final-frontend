@@ -11,7 +11,7 @@ export class MovieTvService {
   // get movies total list
 
   getListMovie() {
-    return this.apiMovieTv.get('http://localhost:3000').toPromise();
+    return this.apiMovieTv.get('http://localhost:3000/movies').toPromise();
   }
   // get movies details
 
@@ -23,7 +23,7 @@ export class MovieTvService {
 export class Movie {
   overview: string;
   vote_count: number;
-  id: number;
+  id: string;
   title: string;
   popularity: number;
   poster_path: string;

@@ -19,7 +19,7 @@ export class MovieDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.reqMdetails.paramMap.subscribe(myParams => {
-      this.movieId = myParams.get('blahId');
+      this.movieId = myParams.get('movieId');
 
       this.fetchMovieData();
     });
