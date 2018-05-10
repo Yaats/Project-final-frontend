@@ -13,9 +13,10 @@ import {MusicService} from './service/music.service';
 import {EventService} from './service/event.service';
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
-import {MovieDetailsComponent} from './movie-details/movie-details.component';
 import {ListService} from './service/list.service';
-import { SearchComponent } from './search/search.component';
+import {SearchComponent} from './search/search.component';
+import {MovieDetailsComponent} from './movie-details/movie-details.component';
+import {EventDetailComponent} from './event-detail/event-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SearchComponent } from './search/search.component';
     SignupComponent,
     MovieDetailsComponent,
     SearchComponent,
+    EventDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
