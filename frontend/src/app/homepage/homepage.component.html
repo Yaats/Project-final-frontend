@@ -22,3 +22,43 @@
     </li>
   </ul>
 </div>
+
+
+
+<!-- <div class="card-header">
+  <div class="title">
+    <h2>Incoming Events</h2>
+  </div> -->
+
+  <!-- <ul>
+    <li *ngFor="let oneEvent of events">
+      <br>
+      <br>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{oneEvent.image.url}}">
+        <div class="card-body">
+          <h5 class="card-title">{{oneEvent.title}}</h5>
+          <p class="card-text">
+            <b>Description :</b> {{oneEvent.html}}
+            <br>
+            <b>Release date :</b> {{oneMovie.release_date}}
+          </p>
+          <a href="#" class="btn btn-success">See Details</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div> -->
+
+<br>
+<br>
+<br>
+<br>
+
+<ul>
+  <li *ngFor="let oneEvent of events">
+    <img src="{{oneEvent.image.url}}">
+    <h3>{{oneEvent.title}}</h3>
+    <p>{{oneEvent.html}}</p>
+  </li>
+</ul>
