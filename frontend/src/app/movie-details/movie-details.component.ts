@@ -11,12 +11,13 @@ import {UserService, User} from '../service/user.service';
 export class MovieDetailsComponent implements OnInit {
   movieId: string;
   movie: Movie;
-  user: User;
+  currentUserId: string;
 
   constructor(
     private reqMdetails: ActivatedRoute,
     public apiMdetails: MovieTvService,
-    private resMdetails: Router
+    private resMdetails: Router,
+    private userThing: UserService
   ) {}
 
   ngOnInit() {
@@ -38,6 +39,17 @@ export class MovieDetailsComponent implements OnInit {
   }
 
   addListClick() {
+    this.userThing
+      .check()
+      .then(result => {
+        // Assigning the current user's ID to a variable
+        this.currentUserId = result.userInfo._id;
+      })
+      .catch(err => {
+        console.log(err);
+      });
+
+    console.log(this.currentUserId);
     const {title} = this.movie;
     const isOk = confirm(`Are you sure you wanna add ${title} to your list ? `);
     if (!isOk) {

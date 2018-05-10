@@ -9,9 +9,9 @@
       <p>
         <b>Vote average :</b> {{movie?.vote_average}}</p>
 
-      <!-- <span *ngIf="userTruc.currentUser"> -->
-      <button (click)="addListClick()">Add to my list</button>
-      <!-- </span> -->
+      <span *ngIf="!currentUserId">
+        <button (click)="addListClick()">Add to my list</button>
+      </span>
 
     </div>
     <div class="col">

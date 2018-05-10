@@ -5,7 +5,7 @@ import {User, UserService} from './user.service';
 
 @Injectable()
 export class MovieTvService {
-  constructor(private apiMovieTv: HttpClient) {}
+  constructor(private apiMovieTv: HttpClient, private userThing: UserService) {}
 
   getListMovie() {
     return this.apiMovieTv.get('http://localhost:3000/movies').toPromise();
@@ -22,8 +22,6 @@ export class MovieTvService {
   // Add this movie to my list
 
   add(movieId) {
-    const user = UserService;
-    console.log(user);
     console.log(movieId);
     return this.apiMovieTv
       .get(`http://localhost:3000/movie-detail/${movieId}`)
