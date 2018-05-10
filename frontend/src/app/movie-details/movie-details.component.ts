@@ -27,7 +27,7 @@ export class MovieDetailsComponent implements OnInit {
   fetchMovieData() {
     this.apiMdetails
       .getDetails(this.movieId)
-      .then((result: Movie) => {
+      .then((result: any) => {
         this.movie = result;
         console.log(result);
       })
