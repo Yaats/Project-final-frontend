@@ -16,7 +16,9 @@ export class MovieTvService {
   // get movies details
 
   getDetails(movieId) {
-    return this.apiMovieTv.get(`http://localhost:3000/${movieId}`).toPromise();
+    return this.apiMovieTv
+      .get(`http://localhost:3000/movie-detail/${movieId}`)
+      .toPromise();
   }
 }
 

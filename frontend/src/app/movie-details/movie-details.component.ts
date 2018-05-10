@@ -29,6 +29,7 @@ export class MovieDetailsComponent implements OnInit {
       .getDetails(this.movieId)
       .then((result: Movie) => {
         this.movie = result;
+        console.log(result);
       })
       .catch(err => {
         console.log('DETAILS MARCHENT PAS 🐙', err);
