@@ -12,7 +12,7 @@
         <div class="card-body">
           <h5 class="card-title">{{oneMovie.title}}</h5>
           <p class="card-text">
-            <b>Description :</b> {{oneMovie.overview}}
+            <!-- <b>Description :</b> {{oneMovie.overview}} -->
             <br>
             <b>Release date :</b> {{oneMovie.release_date}}
           </p>
@@ -25,12 +25,12 @@
 
 
 
-<!-- <div class="card-header">
+<div class="card-header">
   <div class="title">
     <h2>Incoming Events</h2>
-  </div> -->
+  </div>
 
-<!-- <ul>
+<ul>
     <li *ngFor="let oneEvent of events">
       <br>
       <br>
@@ -39,29 +39,18 @@
         <div class="card-body">
           <h5 class="card-title">{{oneEvent.title}}</h5>
           <p class="card-text">
-            <b>Description :</b> {{oneEvent.html}}
+            <!-- <b>Description :</b> {{oneEvent.html}} -->
             <br>
-            <b>Release date :</b> {{oneMovie.release_date}}
+            <b>Event date: </b> {{oneEvent.evenements.realDateStart}}
           </p>
           <a href="#" class="btn btn-success">See Details</a>
         </div>
       </div>
     </li>
   </ul>
-</div> -->
-
-<br>
-<br>
-<br>
-<br>
-
-<div>
-  <h2>Incoming events</h2>
-  <ul>
-    <li *ngFor="let oneEvent of events">
-      <!-- <img src="{{oneEvent.image.url}}"> -->
-      <h3>{{oneEvent.title}}</h3>
-      <p>{{oneEvent.html}}</p>
-    </li>
-  </ul>
 </div>
+
+<br>
+<br>
+<br>
+<br>
