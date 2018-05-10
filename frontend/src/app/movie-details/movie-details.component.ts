@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {MovieTvService, Movie} from '../service/movie-tv.service';
+import {UserService, User} from '../service/user.service';
 
 @Component({
   selector: 'app-movie-details',
@@ -10,6 +11,7 @@ import {MovieTvService, Movie} from '../service/movie-tv.service';
 export class MovieDetailsComponent implements OnInit {
   movieId: string;
   movie: Movie;
+  user: User;
 
   constructor(
     private reqMdetails: ActivatedRoute,
@@ -29,10 +31,29 @@ export class MovieDetailsComponent implements OnInit {
       .getDetails(this.movieId)
       .then((result: any) => {
         this.movie = result;
-        console.log(result);
       })
       .catch(err => {
-        console.log('DETAILS MARCHENT PAS 🐙', err);
+        console.log(err);
       });
+  }
+
+  addListClick() {
+    const {title} = this.movie;
+    const isOk = confirm(`Are you sure you wanna add ${title} to your list ? `);
+    if (!isOk) {
+      return;
+    } else {
+      this.apiMdetails.add(this.movieId);
+      this.resMdetails.navigateByUrl('/');
+    }
+    // const oneToAdd = this.movie;
+    // this.apiMdetails
+    //   .add(this.movie)
+    //   .then(() => {
+    //     this.resMdetails.navigateByUrl('/');
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //   });
   }
 }

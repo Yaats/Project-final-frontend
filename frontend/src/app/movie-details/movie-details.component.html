@@ -1,22 +1,21 @@
-<p> HEY ?</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>{{movie?.title}}</h2>
+      <p>
+        <b>Release date :</b> {{movie?.release_date}}</p>
+      <p>
+        <b>Synopsis :</b> {{movie?.overview}}</p>
+      <p>
+        <b>Vote average :</b> {{movie?.vote_average}}</p>
 
-<h2>{{movie?.title}}</h2>
-<!-- 
-<h3>{{phone?.name}}</h3>
-<p>by
-  <i>{{phone?.brand}}</i>
-</p>
+      <!-- <span *ngIf="userTruc.currentUser"> -->
+      <button (click)="addListClick()">Add to my list</button>
+      <!-- </span> -->
 
-<img *ngIf="phone?.image" [src]="phone.image">
+    </div>
+    <div class="col">
+      <img *ngIf="movie?.poster_path" src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}">
+    </div>
 
-<h3>specs</h3>
-<ul>
-  <li *ngFor="let oneSpec of phone?.specs">
-    {{oneSpec}}
-  </li>
-</ul>
-
-<div>
-  <h3>The danger zone</h3>
-  <button (click)="deleteClick()">Delete this phone</button>
-</div> -->
+  </div>
