@@ -8,8 +8,15 @@ export class MovieTvService {
     // console.log('hello hello??');
   }
 
+  // get movies total list
+
   getListMovie() {
     return this.apiMovieTv.get('http://localhost:3000').toPromise();
+  }
+  // get movies details
+
+  getDetails(movieId) {
+    return this.apiMovieTv.get(`http://localhost:3000/${movieId}`).toPromise();
   }
 }
 
