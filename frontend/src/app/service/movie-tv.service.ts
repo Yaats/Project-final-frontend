@@ -5,7 +5,7 @@ import 'rxjs/operator/toPromise';
 @Injectable()
 export class MovieTvService {
   constructor(private apiMovieTv: HttpClient) {
-    console.log('hello hello??');
+    // console.log('hello hello??');
   }
 
   getListMovie() {
@@ -13,13 +13,15 @@ export class MovieTvService {
   }
 }
 
-// class Movie {
-//   _id: string;
-//   brand: string;
-//   name: string;
-//   image: string;
-//   specs: string[];
-//   // ? means it's not required to have one
-//   createdAt?: Date;
-//   updatedAd?: Date;
-// }
+export class Movie {
+  overview: string;
+  vote_count: number;
+  id: number;
+  title: string;
+  popularity: number;
+  poster_path: string;
+  release_date: string;
+  // ? means it's not required to have one
+  // createdAt?: Date;
+  // updatedAd?: Date;
+}

@@ -1,3 +1,11 @@
 <p>
   homepage works!
 </p>
+
+<ul>
+  <li *ngFor="let oneMovie of movies">
+    <h3>{{oneMovie.title}}</h3>
+    <p>{{oneMovie.overview}}</p>
+    <img [src]="oneMovie.poster_path">
+  </li>
+</ul>
