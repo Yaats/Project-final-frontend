@@ -4,12 +4,13 @@ import "rxjs/operator/toPromise";
 
 @Injectable()
 export class EventService {
-  constructor(private apiEventTv: HttpClient) {
+  constructor(private apiEvent: HttpClient) {
     console.log('hello hello??');
   }
 
   getListEvent() {
-    return this.apiEventTv.get("http://localhost:3000").toPromise();
+    console.log('lourd')
+    return this.apiEvent.get("http://localhost:3000/events").toPromise();
   }
 }
 

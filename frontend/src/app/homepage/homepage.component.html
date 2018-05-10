@@ -55,10 +55,13 @@
 <br>
 <br>
 
-<ul>
-  <li *ngFor="let oneEvent of events">
-    <img src="{{oneEvent.image.url}}">
-    <h3>{{oneEvent.title}}</h3>
-    <p>{{oneEvent.html}}</p>
-  </li>
-</ul>
+<div>
+  <h2>Incoming events</h2>
+  <ul>
+    <li *ngFor="let oneEvent of events">
+      <!-- <img src="{{oneEvent.image.url}}"> -->
+      <h3>{{oneEvent.title}}</h3>
+      <p>{{oneEvent.html}}</p>
+    </li>
+  </ul>
+</div>
