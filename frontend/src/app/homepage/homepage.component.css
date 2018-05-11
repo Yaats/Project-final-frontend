@@ -26,3 +26,13 @@ li {
 .content {
   text-align: center;
 }
+
+.card-event {
+  width: auto;
+  height: 60vh;
+}
+
+.card-movie {
+  width: auto;
+  height: 65vh;
+}
