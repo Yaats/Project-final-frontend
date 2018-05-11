@@ -7,7 +7,6 @@ export class EventService {
   constructor(private apiEvent: HttpClient) {}
 
   getListEvent() {
-    console.log('lourd');
     return this.apiEvent.get('http://localhost:3000/events').toPromise();
   }
 

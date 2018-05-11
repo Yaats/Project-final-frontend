@@ -4,7 +4,7 @@
 <br>
 
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
 
     <div class="col-sm bloc1 ">
@@ -13,7 +13,7 @@
         <div class="textuh">Events</div>
       </div>
     </div>
-
+<br>
     <div *ngIf="searchFormEvent">
       <label>
         <input type="checkbox" (change)="updateEvent('Concert')" name="searchEvent[0]" value="Concert"> Concert
@@ -62,4 +62,17 @@
     </div>
 
   </div>
-</div>
+</div> -->
+
+<!-- <label>
+  Search events
+  <input [(ngModel)]="userInput" type="search" placeholder="1">
+</label>
+
+<ul>
+  <li *ngFor="let oneFood of (foods | foodFilter:userInput)">
+    <h3>{{oneFood.name}}</h3>
+    <h4>{{oneFood.calories}}</h4>
+    <img src="{{oneFood.image}}">
+  </li>
+</ul> -->

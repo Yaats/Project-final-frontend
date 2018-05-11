@@ -18,6 +18,7 @@ import {SearchComponent} from './search/search.component';
 import {MovieDetailsComponent} from './movie-details/movie-details.component';
 import {EventDetailComponent} from './event-detail/event-detail.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+// import { FilterEventPipePipe } from './pipe-folder/filter-event-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     SearchComponent,
     EventDetailComponent,
     AboutUsComponent,
+    // FilterEventPipePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
