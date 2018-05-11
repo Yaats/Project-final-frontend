@@ -24,13 +24,4 @@ export class Event {
   url: string;
   title: string;
   realDateStart: string;
-  // vote_count: number;
-  // id: number;
-  // title: string;
-  // popularity: number;
-  // poster_path: string;
-  // release_date: string;
-  // ? means it's not required to have one
-  // createdAt?: Date;
-  // updatedAd?: Date;
 }
