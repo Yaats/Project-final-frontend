@@ -22,8 +22,13 @@ export class SearchComponent implements OnInit {
   openFormEvent() {
     this.searchFormEvent = !this.searchFormEvent;
   }
-  searchTermEvent() {
-    searchEvent[i].push();
+  searchTermEvent(event) {
+    const index = this.searchEvent.indexOf(event);
+    if (index === -1) {
+      this.searchEvent.push(event);
+    } else {
+      this.searchEvent.splice(index, 1);
+    }
   }
 
   // Search movie and form
