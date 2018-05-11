@@ -12,30 +12,21 @@ import {List, ListService} from '../service/list.service';
 export class MovieDetailsComponent implements OnInit {
   movieId: string;
   movie: Movie;
-  currentUserId: string;
   userList: Array<string>;
 
   constructor(
     private reqMdetails: ActivatedRoute,
     public apiMdetails: MovieTvService,
     private resMdetails: Router,
-    private userThing: UserService
+    private userService: UserService
   ) {}
 
   ngOnInit() {
     this.reqMdetails.paramMap.subscribe(myParams => {
       this.movieId = myParams.get('movieId');
-
       this.fetchMovieData();
     });
-    this.userThing
-      .check()
-      .then(result => {
-        this.currentUserId = result.userInfo._id;
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    console.log(this.userService.currentUser);
   }
 
   fetchMovieData() {

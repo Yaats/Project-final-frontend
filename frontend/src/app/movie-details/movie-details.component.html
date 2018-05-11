@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col">
+
+    <div class="col-sm">
       <h2>{{movie?.title}}</h2>
       <p>
         <b>Release date :</b> {{movie?.release_date}}</p>
@@ -9,13 +10,14 @@
       <p>
         <b>Vote average :</b> {{movie?.vote_average}}</p>
 
-      <span *ngIf="">
-        <button (click)="addListClick()">Add to my list</button>
+      <span *ngIf="userService.currentUser">
+        <button class="btn btn-primary" (click)="addListClick()">Add to my list</button>
       </span>
 
     </div>
-    <div class="col">
+
+    <div class="col-sm">
       <img *ngIf="movie?.poster_path" src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}">
     </div>
-
   </div>
+</div>

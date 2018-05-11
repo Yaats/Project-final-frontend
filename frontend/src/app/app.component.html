@@ -11,7 +11,7 @@
   <span *ngIf="userTruc.currentUser">
     <h3> Welcome {{userTruc.currentUser.username}}</h3>
 
-    <button (click)="logoutClick()">Log Out</button>
+    <button class="btn btn-danger" (click)="logoutClick()">Log Out</button>
     <a routerLink="/search">Search</a>
 
   </span>

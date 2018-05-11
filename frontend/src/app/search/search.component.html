@@ -8,30 +8,56 @@
   <div class="row">
 
     <div class="col-sm bloc1 ">
-      <a routerLink="bka">
-        <img src="../../assets/event.jpg" width="300px">
-        <div class="overlay">
-          <div class="textuh">Events</div>
-        </div>
-      </a>
+      <img src="../../assets/event.jpg" width="300px">
+      <div class="overlay" (click)="openFormEvent()">
+        <div class="textuh">Events</div>
+      </div>
     </div>
+
+    <div *ngIf="searchFormEvent">
+      <label>
+        <input type="checkbox" (change)="updateEvent('Concert')" name="searchEvent[0]" value="Concert"> Concert
+      </label>
+      <label>
+        <input type="checkbox" (change)="updateEvent('Promenade')" name="SearchEvent[1]" value="Promenade"> Promenade
+      </label>
+    </div>
+
+
 
     <div class="col-sm bloc2">
-      <a routerLink="bla">
-        <img src="../../assets/cine.jpg" width="300px">
-        <div class="overlay">
-          <div class="textuh">Movies</div>
-        </div>
-      </a>
+      <img src="../../assets/cine.jpg" width="300px">
+      <div class="overlay" (click)="openFormMovie()">
+        <div class="textuh">Movies</div>
+      </div>
     </div>
 
+    <div *ngIf="searchFormMovie">
+      <label>
+        What type of movie are you looking for ?
+        <input [(ngModel)]="searchMovie" type="text" placeholder="Drama, Thrillers">
+        <button (click)="searchTermMovie()">Search</button>
+
+      </label>
+    </div>
+
+
+
+
     <div class="col-sm bloc3">
-      <a routerLink="bva">
-        <img src="../../assets/serie.jpg" width="300px">
-        <div class="overlay">
-          <div class="textuh">Tv Shows</div>
-        </div>
-      </a>
+      <img src="../../assets/serie.jpg" width="300px">
+      <div class="overlay" (click)="openFormSerie()">
+        <div class="textuh">Tv Shows</div>
+      </div>
+    </div>
+
+    <div *ngIf="searchFormSerie">
+      <label>
+        What type of TV show are you looking for ?
+        <input [(ngModel)]="searchSerie" type="text" placeholder="Comedy">
+        <button (click)="searchTermSerie()">Search</button>
+
+      </label>
     </div>
 
   </div>
