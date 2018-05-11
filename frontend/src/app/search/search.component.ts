@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   searchMovie: string;
-  searchEvent: Array<string>;
+  searchEvent: Array<string> = [];
   searchSerie: string;
 
   searchFormEvent: boolean = false;
@@ -22,14 +22,16 @@ export class SearchComponent implements OnInit {
   openFormEvent() {
     this.searchFormEvent = !this.searchFormEvent;
   }
-  searchTermEvent(event) {
+  updateEvent(event) {
     const index = this.searchEvent.indexOf(event);
+    console.log(index);
     if (index === -1) {
       this.searchEvent.push(event);
     } else {
       this.searchEvent.splice(index, 1);
     }
   }
+  compare(searchEvent) {}
 
   // Search movie and form
   openFormMovie() {
