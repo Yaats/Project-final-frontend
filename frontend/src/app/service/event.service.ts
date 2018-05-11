@@ -7,7 +7,6 @@ export class EventService {
   constructor(private apiEvent: HttpClient) {}
 
   getListEvent() {
-    console.log('lourd');
     return this.apiEvent.get('http://localhost:3000/events').toPromise();
   }
 
@@ -15,6 +14,24 @@ export class EventService {
     return this.apiEvent
       .get(`http://localhost:3000/event-detail/${eventId}`)
       .toPromise();
+  }
+
+  // Add this event to my list
+
+  addSomething(eventInfo, category) {
+    console.log(eventInfo);
+    return this.apiEvent
+      .post(`http://localhost:3000/favorite-event/${category}`, eventInfo, {
+        withCredentials: true,
+      })
+      .toPromise()
+      .then((apiResponse: any) => {
+        console.log(apiResponse);
+        return apiResponse;
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 }
 

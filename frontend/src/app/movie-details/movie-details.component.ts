@@ -48,14 +48,12 @@ export class MovieDetailsComponent implements OnInit {
       return;
     } else {
       this.listServ.currentList.allItems.push(this.movie);
-      console.log('je suis le movie' + this.listServ.currentList.allItems);
+      console.log('je suis le movie' + this.movie);
       this.apiMdetails
-        .addMovie(this.movie)
-        .then(result => {
-          console.log('je suis la ' + result);
-        })
+        .addSomething(this.movie, 'movie')
+        .then(result => {})
         .catch(err => {
-          console.log('ça marche passsssssssssssss', err);
+          console.log(err);
         });
       this.resMdetails.navigateByUrl('/');
     }

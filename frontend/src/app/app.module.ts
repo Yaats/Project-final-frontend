@@ -13,11 +13,12 @@ import {MusicService} from './service/music.service';
 import {EventService} from './service/event.service';
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
-import {ListService} from './service/list.service';
 import {SearchComponent} from './search/search.component';
 import {MovieDetailsComponent} from './movie-details/movie-details.component';
 import {EventDetailComponent} from './event-detail/event-detail.component';
-import { AboutUsComponent } from './about-us/about-us.component';
+import {AboutUsComponent} from './about-us/about-us.component';
+import {FavoriteComponent} from './favorite/favorite.component';
+import {ListService} from './service/list.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     SearchComponent,
     EventDetailComponent,
     AboutUsComponent,
+    FavoriteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
