@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.container {
-  position: relative;
-  width: 50%;
-}
-
 .image {
   display: block;
   width: 100%;
@@ -26,7 +21,15 @@
   background-color: rgba(247, 219, 74, 0.9);
 }
 
-.container:hover .overlay {
+.bloc1:hover .overlay {
+  opacity: 1;
+}
+
+.bloc2:hover .overlay {
+  opacity: 1;
+}
+
+.bloc3:hover .overlay {
   opacity: 1;
 }
 
