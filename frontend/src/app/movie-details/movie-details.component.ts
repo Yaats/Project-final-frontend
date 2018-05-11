@@ -34,7 +34,7 @@ export class MovieDetailsComponent implements OnInit {
       .getDetails(this.movieId)
       .then((result: any) => {
         this.movie = result;
-        console.log(result)
+        //  console.log(result);
       })
       .catch(err => {
         console.log(err);
@@ -48,10 +48,11 @@ export class MovieDetailsComponent implements OnInit {
       return;
     } else {
       this.listServ.currentList.allItems.push(this.movie);
+      console.log('je suis le movie' + this.listServ.currentList.allItems);
       this.apiMdetails
-        .addMovie(this.listServ.currentList.allItems)
+        .addMovie(this.movie)
         .then(result => {
-          console.log(result);
+          console.log('je suis la ' + result);
         })
         .catch(err => {
           console.log('ça marche passsssssssssssss', err);
