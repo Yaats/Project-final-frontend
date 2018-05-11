@@ -29,8 +29,8 @@ export class EventDetailComponent implements OnInit {
     this.apiEdetails
     .getEventDetails(this.eventId)
     .then((result: any) => {
-      console.log(result);
-      this.event = result;
+      this.event = result.data[0];
+      console.log(this.event);
     })
     .catch(err => {
       console.log('Event details does not work', err);

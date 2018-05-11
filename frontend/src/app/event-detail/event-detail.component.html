@@ -1,20 +1,25 @@
-<h1>bla</h1>
-
 <div class="container">
   <div class="row">
-    <div class="col">
-      <h2>{{events?.title}}</h2>
-      <!-- <p>
-        <b>Release date :</b> {{movie?.release_date}}</p>
+
+    <div class="col-sm">
+      <h2>{{event?.nom}}</h2>
       <p>
-        <b>Synopsis :</b> {{movie?.overview}}</p>
+        <b>Event date :</b> {{event?.dateStartEvenement | date}}</p>
       <p>
-        <b>Vote average :</b> {{movie?.vote_average}}</p>
-      <button *ngIf="user" (click)="addListClick()">Add to my list</button>
- 
+        <b>Description :</b> <span [innerHTML]="event?.description"></span></p>
+      <p>
+        <b>Adress :</b> {{event?.adresse}}</p>
+
+      <!-- <span *ngIf="userService.currentUser">
+        <button class="btn btn-primary" (click)="addListClick()">Add to my list</button>
+      </span> -->
+
     </div>
-    <div class="col">
-      <img src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}">
+
+    <!-- <img src="{{oneEvent.image.url}}"> -->
+
+    <!-- <div class="col-sm">
+      <img *ngIf="movie?.poster_path" src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}">
     </div> -->
- 
   </div>
+</div>
