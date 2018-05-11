@@ -19,6 +19,7 @@ import {EventDetailComponent} from './event-detail/event-detail.component';
 import {AboutUsComponent} from './about-us/about-us.component';
 import {FavoriteComponent} from './favorite/favorite.component';
 import {ListService} from './service/list.service';
+// import { FilterEventPipePipe } from './pipe-folder/filter-event-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {ListService} from './service/list.service';
     EventDetailComponent,
     AboutUsComponent,
     FavoriteComponent,
+    // FilterEventPipePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
