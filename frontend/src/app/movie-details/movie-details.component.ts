@@ -34,6 +34,7 @@ export class MovieDetailsComponent implements OnInit {
       .getDetails(this.movieId)
       .then((result: any) => {
         this.movie = result;
+        console.log(result)
       })
       .catch(err => {
         console.log(err);

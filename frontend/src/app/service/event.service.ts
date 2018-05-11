@@ -24,4 +24,6 @@ export class Event {
   url: string;
   title: string;
   realDateStart: string;
+  nom: string;
+  adresse: string;
 }
