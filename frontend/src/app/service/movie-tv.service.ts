@@ -21,10 +21,10 @@ export class MovieTvService {
 
   // Add this movie to my list
 
-  addMovie(movieId) {
+  addMovie(movieId: ) {
     console.log(movieId);
     return this.apiMovieTv
-      .post(`http://localhost:3000/movie-detail/${movieId}`, {
+      .post(`http://localhost:3000/movie-detail/${movieId}`, movieId {
         withCredentials: true,
       })
       .toPromise()
@@ -36,12 +36,12 @@ export class MovieTvService {
 }
 
 export class Movie {
-  overview: string;
-  vote_count: number;
-  vote_average: number;
-  id: string;
-  title: string;
-  popularity: number;
-  poster_path: string;
-  release_date: string;
+  overview?: string;
+  vote_count?: number;
+  vote_average?: number;
+  id?: string;
+  title?: string;
+  popularity?: number;
+  poster_path?: string;
+  release_date?: string;
 }
