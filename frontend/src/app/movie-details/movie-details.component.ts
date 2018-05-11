@@ -18,7 +18,8 @@ export class MovieDetailsComponent implements OnInit {
     private reqMdetails: ActivatedRoute,
     public apiMdetails: MovieTvService,
     private resMdetails: Router,
-    private userService: UserService
+    private userService: UserService,
+    private listServ: ListService
   ) {}
 
   ngOnInit() {
@@ -26,7 +27,6 @@ export class MovieDetailsComponent implements OnInit {
       this.movieId = myParams.get('movieId');
       this.fetchMovieData();
     });
-    console.log(this.userService.currentUser);
   }
 
   fetchMovieData() {
@@ -46,15 +46,15 @@ export class MovieDetailsComponent implements OnInit {
     if (!isOk) {
       return;
     } else {
-      // const myList = new somethingbutwhat(
-      //   this.currentUserId,
-      //   this.movie.title,
-      //   this.movie.release_date,
-      //   this.movie.overview,
-      //   this.movie.poster_path
-      // );
-      //   this.userList.push(myList)
-      this.apiMdetails.add(this.movieId);
+      this.listServ.currentList.allItems.push(this.movie);
+      this.apiMdetails
+        .addMovie(this.listServ.currentList.allItems)
+        .then(result => {
+          console.log(result);
+        })
+        .catch(err => {
+          console.log('ça marche passsssssssssssss', err);
+        });
       this.resMdetails.navigateByUrl('/');
     }
   }

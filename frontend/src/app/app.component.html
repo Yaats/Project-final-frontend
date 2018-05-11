@@ -1,52 +1,56 @@
-<header>
-  <h2>Billise's anti-boredom App </h2>
-  <span *ngIf="!userTruc.currentUser">
+<div class="bandeau">
 
-    <a routerLink="/signup">
-      <button class="btn btn-success">
-        Sign up
-      </button>
+  <header>
+    <h2>Billise's anti-boredom App </h2>
+    <span *ngIf="!userTruc.currentUser">
 
-    </a>
-    <a routerLink="/login">
-      <button class="btn btn-success">
-        Log in
-      </button>
-    </a>
-    <a routerLink="/search">
-      <button class="btn btn-success">
-        Search
-      </button>
-    </a>
+      <a routerLink="/signup">
+        <button class="btn btn-success">
+          Sign up
+        </button>
 
-    <a routerLink="">
-      <button class="btn btn-success">
-        Home
-      </button>
-    </a>
+      </a>
+      <a routerLink="/login">
+        <button class="btn btn-success">
+          Log in
+        </button>
+      </a>
+      <a routerLink="/search">
+        <button class="btn btn-success">
+          Search
+        </button>
+      </a>
 
-  </span>
+      <a routerLink="">
+        <button class="btn btn-success">
+          Home
+        </button>
+      </a>
 
-  <span *ngIf="userTruc.currentUser">
-    <h3> Welcome {{userTruc.currentUser.username}}</h3>
+    </span>
 
-    <button class="btn btn-danger" (click)="logoutClick()">Log Out</button>
+    <span *ngIf="userTruc.currentUser">
+      <h3> Welcome {{userTruc.currentUser.username}}</h3>
+
+      <button class="btn btn-danger" (click)="logoutClick()">Log Out</button>
 
 
-    <a routerLink="/search">
-      <button class="btn btn-success">
-        Search
-      </button>
-    </a>
+      <a routerLink="/search">
+        <button class="btn btn-success">
+          Search
+        </button>
+      </a>
 
-    <a routerLink="">
-      <button class="btn btn-success">
-        Home
-      </button>
-    </a>
+      <a routerLink="">
+        <button class="btn btn-success">
+          Home
+        </button>
+      </a>
 
-  </span>
-</header>
+    </span>
+  </header>
+
+</div>
 
 <span class="content" *ngIf="!userTruc.currentUser">
   <p>

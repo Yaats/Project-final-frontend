@@ -21,11 +21,17 @@ export class MovieTvService {
 
   // Add this movie to my list
 
-  add(movieId) {
+  addMovie(movieId) {
     console.log(movieId);
     return this.apiMovieTv
-      .get(`http://localhost:3000/movie-detail/${movieId}`)
-      .toPromise();
+      .post(`http://localhost:3000/movie-detail/${movieId}`, {
+        withCredentials: true,
+      })
+      .toPromise()
+      .then((apiResponse: any) => {
+        console.log(apiResponse);
+        // return apiResponse;
+      });
   }
 }
 

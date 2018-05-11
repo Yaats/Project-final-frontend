@@ -6,8 +6,15 @@ li {
   list-style-type: none;
 }
 
+.card-header2 {
+  background-color: salmon;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  overflow: scroll;
+}
+
 .card-header {
-  background-color: red;
+  background-color: aquamarine;
   padding: 10px 10px;
   margin: 10px 10px;
   overflow: scroll;

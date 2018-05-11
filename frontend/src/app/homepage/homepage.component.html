@@ -8,7 +8,7 @@
     </span> -->
 </div>
 
-<div class="card-header">
+<div class="card-header2">
   <div class="title">
     <h2>Trending movies</h2>
   </div>
@@ -49,7 +49,8 @@
         <div class="card-body">
           <h5 class="card-title">{{oneEvent.title}}</h5>
           <p class="card-text">
-            <b>Description :</b> <span [innerHTML]="oneEvent.html"></span>
+            <b>Description :</b>
+            <span [innerHTML]="oneEvent.html"></span>
             <br>
             <b>Event date: </b> {{oneEvent.evenements.realDateStart | date}}
           </p>
