@@ -38,4 +38,21 @@ export class SerieDetailsComponent implements OnInit {
         console.log(err);
       });
   }
+
+  addListClick() {
+    const {name} = this.serie;
+    const isOk = confirm(`Are you sure you wanna add ${name} to your list ? `);
+    if (!isOk) {
+      return;
+    } else {
+      this.listServ.currentList.allItems.push(this.serie);
+      this.apiSdetails
+        .addSomething(this.serie, 'tv-show')
+        .then(result => {})
+        .catch(err => {
+          console.log(err);
+        });
+      this.resSdetails.navigateByUrl('');
+    }
+  }
 }

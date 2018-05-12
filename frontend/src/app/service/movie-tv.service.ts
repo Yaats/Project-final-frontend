@@ -31,17 +31,15 @@ export class MovieTvService {
       .toPromise();
   }
 
-  // Add this movie to my list
+  // Add this movie or serie to my list
 
   addSomething(movieInfo, category) {
-    console.log(movieInfo);
     return this.apiMovieTv
       .post(`http://localhost:3000/favorite-event/${category}`, movieInfo, {
         withCredentials: true,
       })
       .toPromise()
       .then((apiResponse: any) => {
-        console.log(apiResponse);
         return apiResponse;
       })
       .catch(err => {

@@ -6,6 +6,13 @@ li {
   list-style-type: none;
 }
 
+.all {
+  margin-top: 10%;
+}
+.card {
+  position: initial;
+}
+
 .card-header2 {
   background-color: salmon;
   padding: 10px 10px;

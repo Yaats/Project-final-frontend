@@ -48,7 +48,6 @@ export class MovieDetailsComponent implements OnInit {
       return;
     } else {
       this.listServ.currentList.allItems.push(this.movie);
-      console.log('je suis le movie' + this.movie);
       this.apiMdetails
         .addSomething(this.movie, 'movie')
         .then(result => {})

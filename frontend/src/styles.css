@@ -19,10 +19,13 @@ body {
   font-family: 'Overpass', sans-serif;
   background-image: url(./assets/cactus.jpg);
   background-repeat: no-repeat;
-  zoom: 200%;
+  /* zoom: 200%; */
 }
 
 .bandeau {
-  height: 50%;
-  width: auto;
+  height: 20%;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
 }

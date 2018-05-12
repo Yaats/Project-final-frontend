@@ -1,93 +1,96 @@
-<div class="content">
-  <h1>You get bored ?</h1>
-  <h1>Let’s find something to do ! </h1>
+<section class="all">
+  <div class="content">
+    <h1>You get bored ?</h1>
+    <h1>Let’s find something to do ! </h1>
 
-  <!-- <span *ngIf="!userTruc.currentUser">
+    <!-- <span *ngIf="!userTruc.currentUser">
       <p>
         <a routerLink="/signup">Sign up</a> to get special content related to you</p>
     </span> -->
-</div>
-
-<div class="card-header2">
-  <div class="title">
-    <h2>Trending movies</h2>
   </div>
 
-  <ul>
-    <li *ngFor="let oneMovie of movies">
-      <br>
-      <br>
-      <div class="card card-movie" style="width: 18rem;">
-        <img class="card-img-top" src="http://image.tmdb.org/t/p/w185/{{oneMovie.poster_path}}">
-        <div class="card-body">
-          <h5 class="card-title">{{oneMovie.title}}</h5>
-          <p class="card-text">
-            <!-- <b>Description :</b> {{oneMovie.overview}} -->
-            <br>
-            <b>Release date :</b> {{oneMovie.release_date}}
-          </p>
-          <a routerLink="/movie-detail/{{oneMovie.id}}" class="btn btn-success">See Details</a>
+
+  <div class="card-header2">
+    <div class="title">
+      <h2>Trending movies</h2>
+    </div>
+
+    <ul>
+      <li *ngFor="let oneMovie of movies">
+        <br>
+        <br>
+        <div class="card card-movie" style="width: 18rem;">
+          <img class="card-img-top" src="http://image.tmdb.org/t/p/w185/{{oneMovie.poster_path}}">
+          <div class="card-body">
+            <h5 class="card-title">{{oneMovie.title}}</h5>
+            <p class="card-text">
+              <!-- <b>Description :</b> {{oneMovie.overview}} -->
+              <br>
+              <b>Release date :</b> {{oneMovie.release_date}}
+            </p>
+            <a routerLink="/movie-detail/{{oneMovie.id}}" class="btn btn-success">See Details</a>
+          </div>
         </div>
-      </div>
-    </li>
-  </ul>
-</div>
-
-
-<div class="card-header3">
-  <div class="title">
-    <h2>Trending Tv Shows</h2>
+      </li>
+    </ul>
   </div>
 
-  <ul>
-    <li *ngFor="let oneSerie of series">
-      <br>
-      <br>
-      <div class="card card-movie" style="width: 18rem;">
-        <img class="card-img-top" src="http://image.tmdb.org/t/p/w185/{{oneSerie.poster_path}}">
-        <div class="card-body">
-          <h5 class="card-title">{{oneSerie.name}}</h5>
-          <p class="card-text">
-            <!-- <b>Description :</b> {{oneMovie.overview}} -->
-            <br>
-            <b>Release date :</b> {{oneSerie.first_air_date}}
 
-          </p>
-          <a routerLink="/serie-detail/{{oneSerie.id}}" class="btn btn-success">See Details</a>
+  <div class="card-header3">
+    <div class="title">
+      <h2>Trending Tv Shows</h2>
+    </div>
+
+    <ul>
+      <li *ngFor="let oneSerie of series">
+        <br>
+        <br>
+        <div class="card card-movie" style="width: 18rem;">
+          <img class="card-img-top" src="http://image.tmdb.org/t/p/w185/{{oneSerie.poster_path}}">
+          <div class="card-body">
+            <h5 class="card-title">{{oneSerie.name}}</h5>
+            <p class="card-text">
+              <!-- <b>Description :</b> {{oneMovie.overview}} -->
+              <br>
+              <b>Release date :</b> {{oneSerie.first_air_date}}
+
+            </p>
+            <a routerLink="/serie-detail/{{oneSerie.id}}" class="btn btn-success">See Details</a>
+          </div>
         </div>
-      </div>
-    </li>
-  </ul>
-</div>
-
-
-<div class="card-header">
-  <div class="title">
-    <h2>Incoming Events</h2>
+      </li>
+    </ul>
   </div>
 
-  <ul>
-    <li *ngFor="let oneEvent of events">
-      <br>
-      <br>
-      <div class="card card-event" style="width: 18rem;">
-        <img class="card-img-top" src="{{oneEvent.image.url}}">
-        <div class="card-body">
-          <h5 class="card-title">{{oneEvent.title}}</h5>
-          <p class="card-text">
-            <!-- <b>Description :</b>
+
+  <div class="card-header">
+    <div class="title">
+      <h2>Incoming Events</h2>
+    </div>
+
+    <ul>
+      <li *ngFor="let oneEvent of events">
+        <br>
+        <br>
+        <div class="card card-event" style="width: 18rem;">
+          <img class="card-img-top" src="{{oneEvent.image.url}}">
+          <div class="card-body">
+            <h5 class="card-title">{{oneEvent.title}}</h5>
+            <p class="card-text">
+              <!-- <b>Description :</b>
             <span [innerHTML]="oneEvent.html"></span> -->
-            <br>
-            <b>Event date: </b> {{oneEvent.evenements.realDateStart | date}}
-          </p>
-          <a routerLink="/event-detail/{{oneEvent.id}}" class="btn btn-success">See Details</a>
+              <br>
+              <b>Event date: </b> {{oneEvent.evenements.realDateStart | date}}
+            </p>
+            <a routerLink="/event-detail/{{oneEvent.id}}" class="btn btn-success">See Details</a>
+          </div>
         </div>
-      </div>
-    </li>
-  </ul>
-</div>
+      </li>
+    </ul>
+  </div>
 
-<br>
-<br>
-<br>
-<br>
+  <br>
+  <br>
+  <br>
+  <br>
+</section>
