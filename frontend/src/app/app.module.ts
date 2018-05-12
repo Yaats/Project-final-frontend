@@ -20,6 +20,7 @@ import {AboutUsComponent} from './about-us/about-us.component';
 import {FavoriteComponent} from './favorite/favorite.component';
 import {ListService} from './service/list.service';
 import { SerieDetailsComponent } from './serie-details/serie-details.component';
+import { EditComponent } from './edit/edit.component';
 // import { FilterEventPipePipe } from './pipe-folder/filter-event-pipe.pipe';
 
 @NgModule({
@@ -35,6 +36,7 @@ import { SerieDetailsComponent } from './serie-details/serie-details.component';
     AboutUsComponent,
     FavoriteComponent,
     SerieDetailsComponent,
+    EditComponent,
     // FilterEventPipePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
