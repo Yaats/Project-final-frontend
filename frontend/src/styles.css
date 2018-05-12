@@ -18,11 +18,11 @@ body {
   padding: 20px;
   font-family: 'Overpass', sans-serif;
   background-image: url(./assets/cactus.jpg);
+  background-repeat: no-repeat;
+  zoom: 200%;
 }
 
 .bandeau {
-  background-image: url(./assets/cactus.jpg);
-  background-repeat: no-repeat;
   height: 50%;
   width: auto;
 }

@@ -71,4 +71,6 @@ export class Serie {
   popularity?: number;
   poster_path?: string;
   first_air_date?: string;
+  episode_run_time?: number;
+  number_of_episodes?: number;
 }
