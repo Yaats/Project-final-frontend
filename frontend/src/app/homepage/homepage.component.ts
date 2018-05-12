@@ -24,20 +24,20 @@ export class HomepageComponent implements OnInit {
         console.log('pas de db ?? ', err);
       });
 
-    this.apiTruc
-      .getListSerie()
+    this.apiTrac
+      .getListEvent()
       .then((response: any) => {
-        console.log(response.results);
-        this.series = response.results;
+        this.events = response.data;
       })
       .catch(err => {
         console.log('pas de db ?? ', err);
       });
 
-    this.apiTrac
-      .getListEvent()
+    this.apiTruc
+      .getListSerie()
       .then((response: any) => {
-        this.events = response.data;
+        console.log(response.results);
+        this.series = response.results;
       })
       .catch(err => {
         console.log('pas de db ?? ', err);
