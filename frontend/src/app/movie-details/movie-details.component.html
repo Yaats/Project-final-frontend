@@ -7,6 +7,18 @@
         <b>Release date :</b> {{movie?.release_date}}</p>
       <p>
         <b>Synopsis :</b> {{movie?.overview}}</p>
+
+
+      <ul>
+        <p>
+          <b>Genre(s) :</b>
+        </p>
+        <li *ngFor="let oneGenre of movie.genres">
+          <p>{{oneGenre.name}}</p>
+        </li>
+      </ul>
+
+
       <p>
         <b>Vote average :</b> {{movie?.vote_average}}</p>
 

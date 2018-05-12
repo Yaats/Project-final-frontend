@@ -57,6 +57,7 @@ export class Movie {
   popularity?: number;
   poster_path?: string;
   release_date?: string;
+  genres?: Array<object>;
 }
 
 export class Serie {
@@ -71,4 +72,5 @@ export class Serie {
   first_air_date?: string;
   episode_run_time?: number;
   number_of_episodes?: number;
+  genres?: Array<object>;
 }
