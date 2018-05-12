@@ -4,7 +4,7 @@
     <div class="col-sm">
       <h2>{{movie?.title}}</h2>
       <p>
-        <b>Release date :</b> {{movie?.release_date}}</p>
+        <b>Release date :</b> {{movie?.release_date | date}}</p>
       <p>
         <b>Synopsis :</b> {{movie?.overview}}</p>
 
@@ -18,9 +18,17 @@
         </li>
       </ul>
 
+      <p>{{movie?.runtime}} min</p>
 
       <p>
         <b>Vote average :</b> {{movie?.vote_average}}</p>
+
+      <span *ngIf="movie?.belongs_to_collection">
+        <p>
+          <i>{{movie.title}}</i> belongs to
+          <i>{{movie.belongs_to_collection.name}}</i>
+        </p>
+      </span>
 
       <span *ngIf="userService.currentUser">
         <button class="btn btn-primary" (click)="addListClick()">Add to my list</button>

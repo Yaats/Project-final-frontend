@@ -1,75 +1,125 @@
-<h2>SIGNUP PAGE</h2>
+<h3>Sign up</h3>
 
 <form (ngSubmit)="signinSubmit()">
-  <label>
-    Email :
-    <input type="email" [(ngModel)]="formCreds.email" name="email" placeholder="a@a.a">
+  <div class="form-group">
+    <label>
+      Email :
+      <input type="email" class="form-control" [(ngModel)]="formCreds.email" name="email" placeholder="imbored@billise.com">
+      <small class="form-text text-muted">We'll never share your email with anyone else.</small>
 
-  </label>
-  <br>
-
-  <label>
-    Password :
-    <input type="password" [(ngModel)]="formCreds.password" name="password" placeholder="*******">
-
-  </label>
-  <br>
-
-  <label>
-    Username :
-    <input type="text" [(ngModel)]="formCreds.username" name="username" placeholder="Username">
-
-  </label>
-  <br>
-
-  <div>
-    <h4>❤️ Please pick your interests so we can show you a selection that is 100% made for you 👍</h4>
-    <br>
-    <p>I like TV SHOWS that make me :</p>
-
-    <label class="btn btn-info">
-      <input type="checkbox" (change)="updateInterests('comedyTvShows')" name="interestedIn[0]" id="comedyTvShows" value="comedyTvShows"> Laugh my ass off
     </label>
-
-    <label class="btn btn-info">
-      <input type="checkbox" (change)="updateInterests('dramaTvShows')" name="interestedIn[1]" id="dramaTvShows" value="dramaTvShows"> Cry like a river
-    </label>
-
     <br>
 
-    <p>I like MOVIES that make me :</p>
+    <label>
+      Password :
+      <input type="password" class="form-control" [(ngModel)]="formCreds.password" name="password" placeholder="*******">
 
-    <label class="btn btn-info">
-      <input type="checkbox" (change)="updateInterests('comedyMovies')" name="interestedIn[2]" id="comedyMovies" value="comedyMovies"> Laugh my ass off
     </label>
-
-    <label class="btn btn-info">
-      <input type="checkbox" (change)="updateInterests('dramaMovies')" name="interestedIn[3]" id="dramaMovies" value="dramaMovies"> Cry like a river
-    </label>
-
-
     <br>
 
-    <p>I like EVENTS in Paris such as :</p>
+    <label>
+      Username :
+      <input type="text" class="form-control" [(ngModel)]="formCreds.username" name="username" placeholder="Username">
 
-    <label class="btn btn-info">
-      <input type="checkbox" (change)="updateInterests('promenadeEvents')" name="interestedIn[4]" id="promenadeEvents" value="promenadeEvents"> Going for a walk
     </label>
-
-    <label class="btn btn-info">
-      <input type="checkbox" (change)="updateInterests('spectacleEvents')" name="interestedIn[5]" id="spectacleEvents" value="spectacleEvents"> Seeing a show
-    </label>
-
-    <label class="btn btn-info">
-      <input type="checkbox" (change)="updateInterests('musicEvents')" name="interestedIn[6]" id="musicEvents" value="musicEvents"> Listening to live music and sometimes even dance
-    </label>
-
-    <label class="btn btn-info">
-      <input type="checkbox" (change)="updateInterests('expoEvents')" name="interestedIn[7]" id="expoEvents" value="expoEvents"> Enjoying a good museum
-    </label>
-
     <br>
 
-    <button>Sign in</button>
+    <div>
+      <h4>❤️ Please pick your interests so we can show you a selection that is 100% made for you 👍</h4>
+      <br>
+      <p>I like
+        <b>TV shows</b> that :</p>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('comedyTvShows')" name="interestedIn[0]" id="comedyTvShows" value="comedyTvShows"> Make me laugh my ass off
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('dramaTvShows')" name="interestedIn[1]" id="dramaTvShows" value="dramaTvShows"> Make me cry like a river
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('thrillerTvShows')" name="interestedIn[10]" id="thrillerTvShows" value="thrillerTvShows"> Have an exciting plot (involving crime or espionage)
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('scaryTvShows')" name="interestedIn[11]" id="scaryTvShows" value="scaryTvShows"> Make me scared
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('actionTvShows')" name="interestedIn[12]" id="actionTvShows" value="actionTvShows"> Have a huge amount of fireshots and/or spectacular car chases
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('fantasyTvShows')" name="interestedIn[15]" id="fantasyTvShows" value="fantasyTvShows"> Where we can see weird stuff happening like magic trolls or supernatural events
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('westernTvShows')" name="interestedIn[16]" id="westernTvShows" value="westernTvShows"> Includes cowboys and lots of cactus
+      </label>
+
+
+      <br>
+
+      <p>I like
+        <b>movies</b> that :</p>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('comedyMovies')" name="interestedIn[2]" id="comedyMovies" value="comedyMovies"> Make me laugh my ass off
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('dramaMovies')" name="interestedIn[3]" id="dramaMovies" value="dramaMovies"> Make me cry like a river
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('thrillerMovies')" name="interestedIn[8]" id="thrillerMovies" value="thrillerMovies"> Have an exciting plot (involving crime or espionage)
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('scaryMovies')" name="interestedIn[9]" id="scaryMovies" value="scaryMovies"> Make me scared
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('actionMovies')" name="interestedIn[13]" id="actionMovies" value="actionMovies"> Have a huge amount of fireshots and/or spectacular car chases
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('fantasyMovies')" name="interestedIn[14]" id="fantasyMovies" value="fantasyMovies"> Where we can see weird stuff happening like magic trolls or supernatural events
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('westernMovies')" name="interestedIn[17]" id="westernMovies" value="westernMovies"> Includes cowboys and lots of cactus
+      </label>
+
+      <br>
+
+      <p>I like
+        <b>events</b> in Paris such as :</p>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('promenadeEvents')" name="interestedIn[4]" id="promenadeEvents" value="promenadeEvents"> Going for a walk
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('spectacleEvents')" name="interestedIn[5]" id="spectacleEvents" value="spectacleEvents"> Seeing a show
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('musicEvents')" name="interestedIn[6]" id="musicEvents" value="musicEvents"> Listening to live music and sometimes even dance
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterests('expoEvents')" name="interestedIn[7]" id="expoEvents" value="expoEvents"> Enjoying a good museum
+      </label>
+
+      <br>
+
+      <button class="btn btn-success">Sign in</button>
+    </div>
   </div>
 </form>
+
+<br>
+<br>
+<br>

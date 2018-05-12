@@ -4,7 +4,13 @@
     <div class="col-sm">
       <h2>{{serie?.name}}</h2>
       <p>
-        <b>Release date :</b> {{serie?.first_air_date}}</p>
+        <b>Release date :</b> {{serie?.first_air_date | date}}</p>
+
+      <p *ngIf="serie.in_production == true">
+
+        <i>{{serie.name}}</i>
+        <b>is still in production</b>
+      </p>
       <p>
         <b>Description :</b> {{serie?.overview}}</p>
 

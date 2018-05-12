@@ -58,6 +58,9 @@ export class Movie {
   poster_path?: string;
   release_date?: string;
   genres?: Array<object>;
+  video?: boolean;
+  belongs_to_collection?: object;
+  runtime: number;
 }
 
 export class Serie {
@@ -73,4 +76,5 @@ export class Serie {
   episode_run_time?: number;
   number_of_episodes?: number;
   genres?: Array<object>;
+  production?: boolean;
 }
