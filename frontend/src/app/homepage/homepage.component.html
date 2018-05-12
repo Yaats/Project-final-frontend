@@ -34,6 +34,32 @@
 </div>
 
 
+<div class="card-header3">
+  <div class="title">
+    <h2>Trending Tv Shows</h2>
+  </div>
+
+  <ul>
+    <li *ngFor="let oneSerie of series">
+      <br>
+      <br>
+      <div class="card card-movie" style="width: 18rem;">
+        <img class="card-img-top" src="http://image.tmdb.org/t/p/w185/{{oneSerie.poster_path}}">
+        <div class="card-body">
+          <h5 class="card-title">{{oneSerie.name}}</h5>
+          <p class="card-text">
+            <!-- <b>Description :</b> {{oneMovie.overview}} -->
+            <br>
+            <b>Release date :</b> {{oneSerie.first_air_date}}
+
+          </p>
+          <a routerLink="/serie-detail/{{oneSerie.id}}" class="btn btn-success">See Details</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
 
 <div class="card-header">
   <div class="title">

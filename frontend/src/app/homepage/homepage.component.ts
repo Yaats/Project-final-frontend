@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MovieTvService, Movie} from '../service/movie-tv.service';
+import {MovieTvService, Movie, Serie} from '../service/movie-tv.service';
 import {EventService, Event} from '../service/event.service';
 
 @Component({
@@ -10,6 +10,7 @@ import {EventService, Event} from '../service/event.service';
 export class HomepageComponent implements OnInit {
   movies: Movie[] = [];
   events: Event[] = [];
+  series: Serie[] = [];
 
   constructor(public apiTruc: MovieTvService, public apiTrac: EventService) {}
 
@@ -17,10 +18,17 @@ export class HomepageComponent implements OnInit {
     this.apiTruc
       .getListMovie()
       .then((response: any) => {
-        const page = response.total_pages;
-        for (let i = 0; i < page; i++) {
-          this.movies = response.results;
-        }
+        this.movies = response.results;
+      })
+      .catch(err => {
+        console.log('pas de db ?? ', err);
+      });
+
+    this.apiTruc
+      .getListSerie()
+      .then((response: any) => {
+        console.log(response.results);
+        this.series = response.results;
       })
       .catch(err => {
         console.log('pas de db ?? ', err);

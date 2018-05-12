@@ -11,6 +11,10 @@ export class MovieTvService {
     return this.apiMovieTv.get('http://localhost:3000/movies').toPromise();
   }
 
+  getListSerie() {
+    return this.apiMovieTv.get('http://localhost:3000/series').toPromise();
+  }
+
   // Get movies details
 
   getDetails(movieId) {
@@ -47,4 +51,16 @@ export class Movie {
   popularity?: number;
   poster_path?: string;
   release_date?: string;
+}
+
+export class Serie {
+  overview?: string;
+  vote_count?: number;
+  vote_average?: number;
+  id?: string;
+  name?: string;
+  number_of_seasons?: number;
+  popularity?: number;
+  poster_path?: string;
+  first_air_date?: string;
 }
