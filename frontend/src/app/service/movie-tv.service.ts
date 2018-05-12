@@ -23,6 +23,14 @@ export class MovieTvService {
       .toPromise();
   }
 
+  // Get movies details
+
+  getDetailsSerie(serieId) {
+    return this.apiMovieTv
+      .get(`http://localhost:3000/serie-detail/${serieId}`)
+      .toPromise();
+  }
+
   // Add this movie to my list
 
   addSomething(movieInfo, category) {

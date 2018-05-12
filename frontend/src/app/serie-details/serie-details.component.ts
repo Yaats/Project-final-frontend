@@ -30,7 +30,7 @@ export class SerieDetailsComponent implements OnInit {
 
   fetchSerieData() {
     this.apiSdetails
-      .getDetails(this.serieId)
+      .getDetailsSerie(this.serieId)
       .then((result: any) => {
         this.serie = result;
       })
