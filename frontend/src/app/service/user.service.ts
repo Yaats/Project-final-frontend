@@ -71,6 +71,7 @@ export class UserService {
         return apiResponse;
       });
 }
+}
 
 export class User {
   myList?: object;

@@ -10,6 +10,7 @@ import {EventDetailComponent} from './event-detail/event-detail.component';
 import {AboutUsComponent} from './about-us/about-us.component';
 import {SerieDetailsComponent} from './serie-details/serie-details.component';
 import {EditComponent} from './edit/edit.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'movie-detail/:movieId', component: MovieDetailsComponent},
   {path: 'event-detail/:eventId', component: EventDetailComponent},
   {path: 'serie-detail/:serieId', component: SerieDetailsComponent},
+  { path: 'favorite', component: FavoriteComponent },
 
   {path: '**', component: NotFoundComponent},
 ];

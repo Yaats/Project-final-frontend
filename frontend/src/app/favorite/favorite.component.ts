@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {List} from '../service/list.service';
+import {List, ListService} from '../service/list.service';
+import { Event } from '../service/event.service';
+import { Movie, Serie } from '../service/movie-tv.service';
 
 @Component({
   selector: 'app-favorite',
@@ -7,7 +9,12 @@ import {List} from '../service/list.service';
   styleUrls: ['./favorite.component.css'],
 })
 export class FavoriteComponent implements OnInit {
-  constructor() {}
+  list: Array<Movie | Event | Serie> = [];
 
-  ngOnInit() {}
+  constructor(public dbList: ListService) {}
+
+  ngOnInit() {
+
+  }
 }
+// Array<Movie | Event | Serie> = []
