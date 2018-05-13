@@ -11,9 +11,7 @@ export class EditComponent implements OnInit {
   user: User;
   creds: SignupCredentials;
 
-  constructor(private userServ: UserService, private resTruc: Router) {
-    console.log(userServ.currentUser);
-  }
+  constructor(private userServ: UserService, private resTruc: Router) {}
 
   ngOnInit() {
     this.userServ.check().catch(err => {
@@ -25,13 +23,13 @@ export class EditComponent implements OnInit {
     this.userServ
       .postEdit(this.creds)
       .then(result => {
+        console.log('ca amrche ???');
         this.resTruc.navigateByUrl('/');
       })
       .catch(err => {
-        console.log(err);
+        console.log('ca marche pao', err);
       });
   }
-
   updateProfile(interest) {
     const index = this.userServ.currentUser.interestedIn.indexOf(interest);
 

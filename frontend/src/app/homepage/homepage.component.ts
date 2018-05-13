@@ -36,7 +36,6 @@ export class HomepageComponent implements OnInit {
     this.apiTruc
       .getListSerie()
       .then((response: any) => {
-        console.log(response.results);
         this.series = response.results;
       })
       .catch(err => {
