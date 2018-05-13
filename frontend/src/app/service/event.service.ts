@@ -21,14 +21,12 @@ export class EventService {
   // Add this event to my list
 
   addSomething(eventInfo, category) {
-    console.log(eventInfo);
     return this.apiEvent
       .post(`http://localhost:3000/favorite-event/${category}`, eventInfo, {
         withCredentials: true,
       })
       .toPromise()
       .then((apiResponse: any) => {
-        console.log(apiResponse);
         return apiResponse;
       })
       .catch(err => {

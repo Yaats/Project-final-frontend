@@ -58,6 +58,18 @@ export class UserService {
         return apiResponse;
       });
   }
+
+  //  EDIT PROFILE
+  postEdit(creds: SignupCredentials) {
+    return this.ajaxTruc
+      .post('http://localhost:3000/api/edit', creds, {
+        withCredentials: true,
+      })
+      .toPromise()
+      .then((apiResponse: any) => {
+        this.currentUser = apiResponse.userInfo;
+        return apiResponse;
+      });
 }
 
 export class User {
