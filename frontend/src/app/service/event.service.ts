@@ -21,21 +21,16 @@ export class EventService {
   // Add this event to my list
 
   addSomething(eventInfo, category) {
-    console.log('1');
     return this.apiEvent
-    .post(`http://localhost:3000/favorite-event/${category}`, eventInfo, {
-      withCredentials: true,
-    })
+      .post(`http://localhost:3000/favorite-event/${category}`, eventInfo, {
+        withCredentials: true,
+      })
       .toPromise()
       .then((apiResponse: any) => {
-        console.log('2');
         return apiResponse;
-
       })
       .catch(err => {
         console.log(err);
-        console.log('3');
-
       });
   }
 }
