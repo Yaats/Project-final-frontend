@@ -67,10 +67,10 @@ export class UserService {
       })
       .toPromise()
       .then((apiResponse: any) => {
-        console.log('apiResponse', apiResponse);
+        console.log('apiResponse avant', apiResponse);
         console.log('thisCU interested in', this.currentUser.interestedIn);
-
         apiResponse = this.currentUser.interestedIn;
+        console.log('apiResponse après', apiResponse);
         return apiResponse;
       });
   }

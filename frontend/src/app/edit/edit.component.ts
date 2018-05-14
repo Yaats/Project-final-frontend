@@ -9,36 +9,39 @@ import {Router} from '@angular/router';
 })
 export class EditComponent implements OnInit {
   user: User;
-  creds: SignupCredentials;
+  creds: SignupCredentials = new SignupCredentials();
 
   constructor(private userServ: UserService, private resTruc: Router) {}
 
   ngOnInit() {
-    this.userServ.check().catch(err => {
-      console.log('app login error', err);
-    });
+    this.userServ
+      .check()
+      .then(() => {
+        this.creds.interestedIn = this.userServ.currentUser.interestedIn;
+      })
+      .catch(err => {
+        console.log('app login error', err);
+      });
   }
 
   update() {
     this.userServ
       .postEdit(this.creds)
       .then(result => {
-        console.log(result);
-
-        console.log('ca amrche ???');
+        this.userServ.currentUser.interestedIn = this.creds.interestedIn;
         this.resTruc.navigateByUrl('/');
       })
       .catch(err => {
-        console.log('ca marche pao', err);
+        console.log(err);
       });
   }
   updateProfile(interest) {
-    const index = this.userServ.currentUser.interestedIn.indexOf(interest);
+    const index = this.creds.interestedIn.indexOf(interest);
     // console.log(this.userServ.currentUser.interestedIn);
     if (index === -1) {
-      this.userServ.currentUser.interestedIn.push(interest);
+      this.creds.interestedIn.push(interest);
     } else {
-      this.userServ.currentUser.interestedIn.splice(index, 1);
+      this.creds.interestedIn.splice(index, 1);
     }
   }
 }
