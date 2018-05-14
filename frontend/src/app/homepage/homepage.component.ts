@@ -21,9 +21,16 @@ export class HomepageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.userServ.check().then(() => {}).catch(err => {
-      console.log('app login error', err);
-    });
+    this.userServ
+      .check()
+      .then(userBlah => {
+        console.log("coucou y'a quelqu'un? ");
+        console.log(this.userServ.currentUser.email);
+        this.userServ.currentUser = userBlah;
+      })
+      .catch(err => {
+        console.log('app login error', err);
+      });
 
     this.apiTruc
       .getListMovie()
