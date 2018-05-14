@@ -16,6 +16,12 @@ export class FavoriteComponent implements OnInit {
   constructor(public dbList: ListService, private userServ: UserService) {}
 
   ngOnInit() {
-
+    console.log('eghjkl');
+    this.dbList
+    .getList()
+    .then((response: any) => {
+      console.log(this.dbList)
+      this.list = response;
+    })
   }
 }

@@ -2,12 +2,20 @@ import {Injectable} from '@angular/core';
 import {UserService} from './user.service';
 import {Movie, Serie} from './movie-tv.service';
 import {Event} from './event.service';
+import 'rxjs/operator/toPromise';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable()
 export class ListService {
   currentList: List = new List();
 
-  constructor(private userThing: UserService) {}
+  constructor(private userThing: UserService, private billise: HttpClient) {}
+
+  getList() {
+    return this.billise.get('http://localhost:3000/favorite-event/billise').toPromise();
+  }
+
 }
 
 export class List {
