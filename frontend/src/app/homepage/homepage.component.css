@@ -41,9 +41,11 @@ li {
 .card-event {
   width: auto;
   height: 60vh;
+  margin-left: 10px;
 }
 
 .card-movie {
   width: auto;
   height: 65vh;
+  margin-left: 10px;
 }
