@@ -73,6 +73,7 @@ export class UserService {
       });
   }
 }
+}
 
 export class User {
   myList?: object;
