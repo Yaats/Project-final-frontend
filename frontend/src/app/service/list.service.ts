@@ -3,8 +3,7 @@ import {UserService} from './user.service';
 import {Movie, Serie} from './movie-tv.service';
 import {Event} from './event.service';
 import 'rxjs/operator/toPromise';
-import { HttpClient } from '@angular/common/http';
-
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class ListService {
@@ -13,9 +12,10 @@ export class ListService {
   constructor(private userThing: UserService, private billise: HttpClient) {}
 
   getList() {
-    return this.billise.get('http://localhost:3000/favorite-event/billise').toPromise();
+    return this.billise
+      .get('http://localhost:3000/favorite-event/event/billise')
+      .toPromise();
   }
-
 }
 
 export class List {

@@ -46,6 +46,20 @@ export class MovieTvService {
         console.log(err);
       });
   }
+
+  addSomethingS(serieInfo, category) {
+    return this.apiMovieTv
+      .post(`http://localhost:3000/favorite-event/tv-show`, serieInfo, {
+        withCredentials: true,
+      })
+      .toPromise()
+      .then((apiResponse: any) => {
+        return apiResponse;
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 }
 
 export class Movie {

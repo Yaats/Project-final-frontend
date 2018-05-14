@@ -39,7 +39,7 @@ export class SerieDetailsComponent implements OnInit {
       });
   }
 
-  addListClick() {
+  addListClickS() {
     const {name} = this.serie;
     const isOk = confirm(`Are you sure you wanna add ${name} to your list ? `);
     if (!isOk) {
@@ -47,7 +47,7 @@ export class SerieDetailsComponent implements OnInit {
     } else {
       this.listServ.currentList.allItems.push(this.serie);
       this.apiSdetails
-        .addSomething(this.serie, 'tv-show')
+        .addSomethingS(this.serie, 'tv-show')
         .then(result => {})
         .catch(err => {
           console.log(err);

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MovieTvService, Movie, Serie} from '../service/movie-tv.service';
 import {EventService, Event} from '../service/event.service';
+import {UserService, SignupCredentials} from '../service/user.service';
 
 @Component({
   selector: 'app-homepage',
@@ -11,10 +12,19 @@ export class HomepageComponent implements OnInit {
   movies: Movie[] = [];
   events: Event[] = [];
   series: Serie[] = [];
+  creds: SignupCredentials = new SignupCredentials();
 
-  constructor(public apiTruc: MovieTvService, public apiTrac: EventService) {}
+  constructor(
+    public apiTruc: MovieTvService,
+    private userServ: UserService,
+    public apiTrac: EventService
+  ) {}
 
   ngOnInit() {
+    this.userServ.check().then(() => {}).catch(err => {
+      console.log('app login error', err);
+    });
+
     this.apiTruc
       .getListMovie()
       .then((response: any) => {

@@ -3,4 +3,30 @@
 <!-- <p> {{list?.category}} </p> -->
 <h3>HELLO LA LISTE ?</h3>
 
-<p>{{list.category}}</p>
+
+<ul>
+  <li *ngFor="let oneList of list">
+    <p>{{oneList.category}}</p>
+
+    <span *ngIf="oneList.category == 'movie'">
+      <h2>{{oneList.details.name}}</h2>
+      <h2>{{oneList.details.title}}</h2>
+      <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}">
+      <p>Added to my list on : {{oneList.createdAt | date }}</p>
+    </span>
+
+    <span *ngIf="oneList.category == 'tv-show'">
+      <h2>{{oneList.details.name}}</h2>
+      <h2>{{oneList.details.title}}</h2>
+      <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}">
+      <p>Added to my list on : {{oneList.createdAt | date }}</p>
+    </span>
+
+
+    <span *ngIf="oneList.category == 'event'">
+      <h2>{{oneList.details.nom}}</h2>
+      <!-- <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}"> -->
+      <p>Added to my list on : {{oneList.createdAt | date }}</p>
+    </span>
+  </li>
+</ul>
