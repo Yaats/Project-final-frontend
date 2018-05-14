@@ -43,6 +43,7 @@ export class EventDetailComponent implements OnInit {
 
   addListClick() {
     const {nom} = this.event;
+    console.log(this.event);
     const isOk = confirm(`Are you sure you wanna add ${nom} to your list ? `);
     if (!isOk) {
       return;
