@@ -19,7 +19,7 @@
       <li *ngFor="let oneMovie of movies">
         <br>
         <br>
-        <div class="card card-movie" style="width: 18rem;">
+        <div class="card card-movie">
           <img class="card-img-top" src="http://image.tmdb.org/t/p/w185/{{oneMovie.poster_path}}">
           <div class="card-body">
             <h5 class="card-title">{{oneMovie.title}}</h5>
@@ -45,7 +45,7 @@
       <li *ngFor="let oneSerie of series">
         <br>
         <br>
-        <div class="card card-movie" style="width: 18rem;">
+        <div class="card card-movie">
           <img class="card-img-top" src="http://image.tmdb.org/t/p/w185/{{oneSerie.poster_path}}">
           <div class="card-body">
             <h5 class="card-title">{{oneSerie.name}}</h5>
@@ -72,7 +72,7 @@
       <li *ngFor="let oneEvent of events">
         <br>
         <br>
-        <div class="card card-event" style="width: 18rem;">
+        <div class="card card-event">
           <img class="card-img-top" src="{{oneEvent.image.url}}">
           <div class="card-body">
             <h5 class="card-title">{{oneEvent.title}}</h5>

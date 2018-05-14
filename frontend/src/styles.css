@@ -17,11 +17,6 @@ footer p {
 body {
   padding: 20px;
   font-family: 'Overpass', sans-serif;
-  background-image: url(./assets/cactus.jpg);
-  background-repeat: no-repeat;
+  background-color: aliceblue;
 }
 
-.bandeau {
-  width: 100%;
-  background-color: white;
-}

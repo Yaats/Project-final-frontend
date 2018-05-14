@@ -8,24 +8,22 @@ li {
 
 .card {
   position: initial;
+
 }
 
 .card-header2 {
-  background-color: salmon;
   padding: 10px 10px;
   margin: 10px 10px;
   overflow: scroll;
 }
 
 .card-header3 {
-  background-color: olive;
   padding: 10px 10px;
   margin: 10px 10px;
   overflow: scroll;
 }
 
 .card-header {
-  background-color: aquamarine;
   padding: 10px 10px;
   margin: 10px 10px;
   overflow: scroll;
@@ -45,7 +43,10 @@ li {
 }
 
 .card-movie {
-  width: auto;
-  height: 65vh;
   margin-left: 10px;
+}
+
+ul img {
+  width: auto;
+  height: 35vh;
 }
