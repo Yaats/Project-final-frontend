@@ -62,15 +62,15 @@ export class UserService {
   //  EDIT PROFILE
   postEdit(creds: SignupCredentials) {
     return this.ajaxTruc
-      .post('http://localhost:3000/api/edit', creds, {
+      .put('http://localhost:3000/api/edit', creds, {
         withCredentials: true,
       })
       .toPromise()
       .then((apiResponse: any) => {
         console.log('apiResponse', apiResponse);
-        console.log('this current user', this.currentUser.interestedIn);
+        console.log('thisCU interested in', this.currentUser.interestedIn);
 
-        this.currentUser.interestedIn = apiResponse;
+        apiResponse = this.currentUser.interestedIn;
         return apiResponse;
       });
   }

@@ -34,7 +34,7 @@ export class EditComponent implements OnInit {
   }
   updateProfile(interest) {
     const index = this.userServ.currentUser.interestedIn.indexOf(interest);
-    console.log(this.userServ.currentUser.interestedIn);
+    // console.log(this.userServ.currentUser.interestedIn);
     if (index === -1) {
       this.userServ.currentUser.interestedIn.push(interest);
     } else {
