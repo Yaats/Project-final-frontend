@@ -16,17 +16,12 @@ footer p {
 
 body {
   padding: 20px;
-  margin-top: 10%;
   font-family: 'Overpass', sans-serif;
   background-image: url(./assets/cactus.jpg);
   background-repeat: no-repeat;
-  /* zoom: 200%; */
 }
 
 .bandeau {
-  height: 25vh;
   width: 100%;
   background-color: white;
-  position: fixed;
-  top: 0;
 }

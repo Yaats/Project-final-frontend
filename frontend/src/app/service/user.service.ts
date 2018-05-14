@@ -67,8 +67,10 @@ export class UserService {
       })
       .toPromise()
       .then((apiResponse: any) => {
-        console.log(apiResponse);
-        this.currentUser.interestedIn = apiResponse.userInfo;
+        console.log('apiResponse', apiResponse);
+        console.log('this current user', this.currentUser.interestedIn);
+
+        this.currentUser.interestedIn = apiResponse;
         return apiResponse;
       });
   }
