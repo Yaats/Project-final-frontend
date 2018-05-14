@@ -9,6 +9,7 @@
     </span> -->
   </div>
 
+  <!-- <p>{{currentUser.username}}</p> -->
 
   <div class="card-header2">
     <div class="title">
@@ -16,22 +17,23 @@
     </div>
 
     <ul>
+      <!-- <span *ngIf=""> -->
       <li *ngFor="let oneMovie of movies">
         <br>
         <br>
-        <div class="card card-movie">
-          <img class="card-img-top" src="http://image.tmdb.org/t/p/w185/{{oneMovie.poster_path}}">
-          <div class="card-body">
-            <h5 class="card-title">{{oneMovie.title}}</h5>
-            <p class="card-text">
-              <!-- <b>Description :</b> {{oneMovie.overview}} -->
-              <br>
-              <b>Release date :</b> {{oneMovie.release_date}}
-            </p>
-            <a routerLink="/movie-detail/{{oneMovie.id}}" class="btn btn-success">See Details</a>
+        <div class="card card-movie bloc">
+          <img class="card-img-top " src="http://image.tmdb.org/t/p/w185/{{oneMovie.poster_path}}">
+          <div class="card-body overlay">
+            <div class="card-title textuh">
+              <p>{{oneMovie.title}}</p>
+              <!-- <p>
+                <b>Release date :</b> {{oneMovie.release_date}}</p> -->
+              <a routerLink="/movie-detail/{{oneMovie.id}}" class="btn btn-success">See Details</a>
+            </div>
           </div>
         </div>
       </li>
+      <!-- </span> -->
     </ul>
   </div>
 
@@ -45,17 +47,15 @@
       <li *ngFor="let oneSerie of series">
         <br>
         <br>
-        <div class="card card-movie">
+        <div class="card card-movie bloc">
           <img class="card-img-top" src="http://image.tmdb.org/t/p/w185/{{oneSerie.poster_path}}">
-          <div class="card-body">
-            <h5 class="card-title">{{oneSerie.name}}</h5>
-            <p class="card-text">
-              <!-- <b>Description :</b> {{oneMovie.overview}} -->
-              <br>
-              <b>Release date :</b> {{oneSerie.first_air_date}}
-
-            </p>
-            <a routerLink="/serie-detail/{{oneSerie.id}}" class="btn btn-success">See Details</a>
+          <div class="card-body overlay">
+            <div class="card-title textuh">
+              <p>{{oneSerie.name}}</p>
+              <!-- <br>
+              <b>Release date :</b> {{oneSerie.first_air_date}} -->
+              <a routerLink="/serie-detail/{{oneSerie.id}}" class="btn btn-success">See Details</a>
+            </div>
           </div>
         </div>
       </li>
