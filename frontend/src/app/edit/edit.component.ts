@@ -23,7 +23,7 @@ export class EditComponent implements OnInit {
     this.userServ
       .postEdit(this.creds)
       .then(result => {
-        console.log(this.creds);
+        console.log(result);
 
         console.log('ca amrche ???');
         this.resTruc.navigateByUrl('/');
