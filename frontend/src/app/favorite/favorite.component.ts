@@ -13,6 +13,7 @@ export class FavoriteComponent implements OnInit {
   list: Array<Movie | Event | Serie> = [];
   user: User;
   creds: SignupCredentials = new SignupCredentials();
+  _id: string
 
   constructor(public dbList: ListService, private userServ: UserService) {}
 
@@ -25,4 +26,24 @@ export class FavoriteComponent implements OnInit {
       this.list = response;
     });
   }
+
+  deleteClick() {
+    // const {  } = this.list;
+
+    // const isOkay = confirm(`Are you sure you want to delete ${} from your list?`);
+    // if (!isOkay) {
+    //   return;
+    // }
+    this.dbList
+      .delete(this._id)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log('Fav delete error');
+        console.log(err);
+      });
+  }
+}
+
 }

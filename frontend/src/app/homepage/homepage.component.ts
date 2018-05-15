@@ -24,7 +24,7 @@ export class HomepageComponent implements OnInit {
     this.userServ
       .check()
       .then(userBlah => {
-        console.log("coucou y'a quelqu'un? ");
+        console.log("coucou y'a quelqu'un? ", userBlah);
         console.log(this.userServ.currentUser.email);
         this.userServ.currentUser = userBlah;
       })
