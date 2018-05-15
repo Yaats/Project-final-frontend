@@ -9,3 +9,7 @@
 nav h3 {
   color: white;
 }
+
+body {
+  overflow: auto;
+}

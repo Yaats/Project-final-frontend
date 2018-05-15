@@ -12,6 +12,7 @@ export class HomepageComponent implements OnInit {
   movies: Movie[] = [];
   events: Event[] = [];
   series: Serie[] = [];
+  moviesReco: Movie[] = [];
   creds: SignupCredentials = new SignupCredentials();
 
   constructor(
@@ -47,5 +48,15 @@ export class HomepageComponent implements OnInit {
       .catch(err => {
         console.log('pas de db ?? ', err);
       });
-  }
+
+    this.apiTruc
+      .getMovieReco()
+      .then((response: any) => {
+        this.moviesReco = response.results;
+        console.log(response.results);
+      })
+      .catch(err => {
+        console.log('marchpo reco', err);
+      })
+    }
 }

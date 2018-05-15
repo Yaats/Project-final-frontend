@@ -92,6 +92,34 @@
     </ul>
   </div>
 
+  <div class="card-header2">
+    <div class="title">
+      <h2>Reco movies</h2>
+    </div>
+
+    <ul>
+      <!-- <span *ngIf=""> -->
+      <!-- <li *ngFor="let oneLeo of (leonardos | actorFilter: userInput)"> -->
+
+      <li *ngFor="let oneMovie of moviesReco">
+        <br>
+        <br>
+        <div class="card card-movie bloc">
+          <img class="card-img-top " src="http://image.tmdb.org/t/p/w185/{{oneMovie.poster_path}}">
+          <div class="card-body overlay">
+            <div class="card-title textuh">
+              <p>{{oneMovie.title}}</p>
+              <!-- <p>
+                <b>Release date :</b> {{oneMovie.release_date}}</p> -->
+              <a routerLink="/movie-detail/{{oneMovie.id}}" class="btn btn-success">See Details</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- </span> -->
+    </ul>
+  </div>
+
   <br>
   <br>
   <br>

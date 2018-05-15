@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { Movie, MovieTvService } from '../service/movie-tv.service';
 
 @Component({
   selector: 'app-search',
@@ -6,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
+  movies: Movie[] = [];
+
   searchMovie: string;
   searchEvent: Array<string> = [];
   searchSerie: string;
@@ -14,9 +17,13 @@ export class SearchComponent implements OnInit {
   searchFormMovie: boolean = false;
   searchFormSerie: boolean = false;
 
-  constructor() {}
+  constructor(
+    public apiMovie: MovieTvService
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
 
   // Search event and form
   openFormEvent() {
@@ -44,4 +51,5 @@ export class SearchComponent implements OnInit {
     this.searchFormSerie = !this.searchFormSerie;
   }
   searchTermSerie() {}
+  
 }

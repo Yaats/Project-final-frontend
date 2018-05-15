@@ -3,10 +3,11 @@
 
     <div class="col-sm">
       <h2>{{event?.nom}}</h2>
+      <br>
       <p>
         <b>Event date :</b> {{event?.dateStartEvenement | date}}</p>
       <p>
-        <b>Description :</b> <span [innerHTML]="event?.description"></span></p>
+        <b>Description :</b> <span [innerHTML]="event?.small_description"></span></p>
       <p>
         <b>Adress :</b> {{event?.adresse}}</p>
 
@@ -17,3 +18,5 @@
     </div>
   </div>
 </div>
+
+<script></script>

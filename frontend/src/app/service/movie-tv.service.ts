@@ -11,6 +11,10 @@ export class MovieTvService {
     return this.apiMovieTv.get('http://localhost:3000/movies').toPromise();
   }
 
+  getMovieReco() {
+    return this.apiMovieTv.get('http://localhost:3000/reco').toPromise();
+  }
+
   getListSerie() {
     return this.apiMovieTv.get('http://localhost:3000/series').toPromise();
   }
