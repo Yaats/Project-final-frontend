@@ -17,9 +17,17 @@ export class ListService {
       .toPromise();
   }
 
+  // getListId(_id) {
+  //   return this.billise.get(
+  //     `http://localhost:3000/favorite-event/event/billise/${_id}`
+  //   );
+  // }
+
   delete(_id) {
     return this.billise
-      .delete(`http://localhost:3000/favorite-event/event/billise/${_id}`)
+      .delete(
+        `http://localhost:3000/favorite-event/event/billise/delete/337167`
+      )
       .toPromise();
   }
 }
