@@ -18,6 +18,8 @@ export class EditComponent implements OnInit {
       .check()
       .then(() => {
         this.creds.interestedIn = this.userServ.currentUser.interestedIn;
+        this.creds.interestedInEvent = this.userServ.currentUser.interestedInEvent;
+        this.creds.interestedInSerie = this.userServ.currentUser.interestedInSerie;
       })
       .catch(err => {
         console.log('app login error', err);
@@ -37,11 +39,30 @@ export class EditComponent implements OnInit {
   }
   updateProfile(interest) {
     const index = this.creds.interestedIn.indexOf(interest);
-    // console.log(this.userServ.currentUser.interestedIn);
     if (index === -1) {
       this.creds.interestedIn.push(interest);
     } else {
       this.creds.interestedIn.splice(index, 1);
+    }
+  }
+
+  updateProfileSerie(interest) {
+    const index = this.creds.interestedInSerie.indexOf(interest);
+    console.log(this.userServ.currentUser.interestedInSerie);
+    if (index === -1) {
+      this.creds.interestedInSerie.push(interest);
+    } else {
+      this.creds.interestedInSerie.splice(index, 1);
+    }
+  }
+
+  updateProfileEvent(interest) {
+    const index = this.creds.interestedInEvent.indexOf(interest);
+    // console.log(this.userServ.currentUser.interestedIn);
+    if (index === -1) {
+      this.creds.interestedInEvent.push(interest);
+    } else {
+      this.creds.interestedInEvent.splice(index, 1);
     }
   }
 }

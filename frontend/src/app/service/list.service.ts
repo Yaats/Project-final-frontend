@@ -9,7 +9,7 @@ import {HttpClient} from '@angular/common/http';
 export class ListService {
   currentList: List = new List();
 
-  constructor(private userThing: UserService, private billise: HttpClient) {}
+  constructor(public userThing: UserService, private billise: HttpClient) {}
 
   getList() {
     return this.billise
@@ -17,16 +17,10 @@ export class ListService {
       .toPromise();
   }
 
-  // getListId(_id) {
-  //   return this.billise.get(
-  //     `http://localhost:3000/favorite-event/event/billise/${_id}`
-  //   );
-  // }
-
-  delete(_id) {
+  delete(itemId) {
     return this.billise
       .delete(
-        `http://localhost:3000/favorite-event/event/billise/delete/337167`
+        `http://localhost:3000/favorite-event/${itemId.category}/billise/${itemId._id}`
       )
       .toPromise();
   }

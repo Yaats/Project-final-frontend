@@ -67,18 +67,25 @@ export class UserService {
       })
       .toPromise()
       .then((apiResponse: any) => {
-        apiResponse = this.currentUser.interestedIn;
+        apiResponse =
+          this.currentUser.interestedIn ||
+          this.currentUser.interestedInEvent ||
+          console.log(this.currentUser.interestedInEvent);
+        this.currentUser.interestedInSerie;
         return apiResponse;
       });
   }
 }
 
 export class User {
+  _id?: string;
   myList?: object;
   username: string;
   email: string;
   password: string;
   interestedIn?: number[] = [];
+  interestedInSerie?: number[] = [];
+  interestedInEvent?: number[] = [];
 }
 
 export class LoginCredentials {
@@ -91,4 +98,6 @@ export class SignupCredentials {
   password: string;
   username: string;
   interestedIn: number[] = [];
+  interestedInSerie?: number[] = [];
+  interestedInEvent?: number[] = [];
 }

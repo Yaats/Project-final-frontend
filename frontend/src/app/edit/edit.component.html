@@ -11,42 +11,42 @@
         <b>TV shows</b> that :</p>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(35)" (change)="updateProfile(35)" name="interestedIn[0]" id="comedyTvShows"
-          value="comedyTvShows"> Make me laugh my ass off
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(35)" (change)="updateProfileSerie(35)" name="interestedInSerie[0]"
+          id="comedyTvShows" value="comedyTvShows"> Make me laugh my ass off
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(18)" (change)="updateProfile(18)" name="interestedIn[1]" id="dramaTvShows"
-          value="dramaTvShows"> Make me cry like a river
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(18)" (change)="updateProfileSerie(18)" name="interestedInSerie[1]"
+          id="dramaTvShows" value="dramaTvShows"> Make me cry like a river
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(53)" (change)="updateProfile(53)" name="interestedIn[10]" id="thrillerTvShows"
-          value="thrillerTvShows"> Have an exciting plot (involving crime or espionage)
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(53)" (change)="updateProfileSerie(53)" name="interestedInSerie[10]"
+          id="thrillerTvShows" value="thrillerTvShows"> Have an exciting plot (involving crime or espionage)
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(27)" (change)="updateProfile(27)" name="interestedIn[11]" id="scaryTvShows"
-          value="scaryTvShows"> Make me scared
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(27)" (change)="updateProfileSerie(27)" name="interestedInSerie[11]"
+          id="scaryTvShows" value="scaryTvShows"> Make me scared
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(28)" (change)="updateProfile(28)" name="interestedIn[12]" id="actionTvShows"
-          value="actionTvShows"> Have a huge amount of fireshots and/or spectacular car chases
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(28)" (change)="updateProfileSerie(28)" name="interestedInSerie[12]"
+          id="actionTvShows" value="actionTvShows"> Have a huge amount of fireshots and/or spectacular car chases
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(878)" (change)="updateProfile(878)" name="interestedIn[15]"
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(878)" (change)="updateProfileSerie(878)" name="interestedInSerie[15]"
           id="fantasyTvShows" value="fantasyTvShows"> Where we can see weird stuff happening like magic trolls or supernatural events
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(37)" (change)="updateProfile(37)" name="interestedIn[16]" id="westernTvShows"
-          value="westernTvShows"> Includes cowboys and lots of cactus
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(37)" (change)="updateProfileSerie(37)" name="interestedInSerie[16]"
+          id="westernTvShows" value="westernTvShows"> Includes cowboys and lots of cactus
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(10749)" (change)="updateProfile(10749)" name="interestedIn[18]"
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(10749)" (change)="updateProfileSerie(10749)" name="interestedInSerie[18]"
           id="loveTvShows" value="loveTvShows"> All I need is love
       </label>
 
@@ -102,28 +102,28 @@
         <b>events</b> in Paris such as :</p>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(1)" (change)="updateInterests(1)" name="interestedIn[4]" id="festivEvents"
-          value="festivEvents"> Going to a festival, flea-market or exhibition
+        <input type="checkbox" [checked]="creds.interestedInEvent.includes(1)" (change)="updateProfileEvent(1)" name="interestedInEvent[4]"
+          id="festivEvents" value="festivEvents"> Going to a festival, flea-market or exhibition
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(3)" (change)="updateProfile(3)" name="interestedIn[5]" id="spectacleEvents"
-          value="spectacleEvents"> Seeing a show (theater, dance, stand-up..)
+        <input type="checkbox" [checked]="creds.interestedInEvent.includes(3)" (change)="updateProfileEvent(3)" name="interestedInEvent[5]"
+          id="spectacleEvents" value="spectacleEvents"> Seeing a show (theater, dance, stand-up..)
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(4)" (change)="updateProfile(4)" name="interestedIn[6]" id="musicEvents"
-          value="musicEvents"> Listening to live music and sometimes even dance
+        <input type="checkbox" [checked]="creds.interestedInEvent.includes(4)" (change)="updateProfileEvent(4)" name="interestedInEvent[6]"
+          id="musicEvents" value="musicEvents"> Listening to live music and sometimes even dance
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(2)" (change)="updateProfile(2)" name="interestedIn[7]" id="expoEvents"
-          value="expoEvents"> Enjoying a good museum
+        <input type="checkbox" [checked]="creds.interestedInEvent.includes(2)" (change)="updateProfileEvent(2)" name="interestedInEvent[7]"
+          id="expoEvents" value="expoEvents"> Enjoying a good museum
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedIn.includes(5)" (change)="updateProfile(5)" name="interestedIn[20]" id="animationEvents"
-          value="animationEvents"> Participate to a conference, lecture, meeting, visit..
+        <input type="checkbox" [checked]="creds.interestedInEvent.includes(5)" (change)="updateProfileEvent(5)" name="interestedInEventSerie[20]"
+          id="animationEvents" value="animationEvents"> Participate to a conference, lecture, meeting, visit..
       </label>
 
       <br>

@@ -11,43 +11,30 @@ import {User, UserService, SignupCredentials} from '../service/user.service';
 })
 export class FavoriteComponent implements OnInit {
   list: Array<Movie | Event | Serie> = [];
-  listId: string;
   user: User;
   creds: SignupCredentials = new SignupCredentials();
   userList: Array<string> = [];
   _id: string;
+  item: any;
 
-  constructor(public dbList: ListService, private userServ: UserService) {}
+  constructor(public dbList: ListService, public userServ: UserService) {}
 
   ngOnInit() {
     this.dbList.getList().then((response: any) => {
       this.list = response;
-      console.log(this.list);
     });
-    // this.dbList.getListId().then((response: any) => {
-    //   this.listId = response;
-    //   console.log(this.listId);
-    // });
   }
 
-  deleteClick() {
-    for (var l = 0; l < this.list.length; l++) {
-      var aList = this.list[l];
-    }
+  deleteClick(oneList) {
     const isOkay = confirm(
-      `Are you sure you want to delete ${aList} from your list?`
+      'Are you sure you want to delete it from your list?'
     );
     if (!isOkay) {
       return;
     }
-    this.dbList
-      .delete(this._id)
-      .then(result => {
-        console.log(result);
-      })
-      .catch(err => {
-        console.log('Fav delete error');
-        console.log(err);
-      });
+    this.dbList.delete(oneList).then(result => {}).catch(err => {
+      console.log('Fav delete error');
+      console.log(err);
+    });
   }
 }

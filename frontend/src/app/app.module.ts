@@ -19,10 +19,8 @@ import {EventDetailComponent} from './event-detail/event-detail.component';
 import {AboutUsComponent} from './about-us/about-us.component';
 import {FavoriteComponent} from './favorite/favorite.component';
 import {ListService} from './service/list.service';
-import { SerieDetailsComponent } from './serie-details/serie-details.component';
-import { EditComponent } from './edit/edit.component';
-import { UserFilterPipe } from './pipe-folder/user-filter.pipe';
-// import { FilterEventPipePipe } from './pipe-folder/filter-event-pipe.pipe';
+import {SerieDetailsComponent} from './serie-details/serie-details.component';
+import {EditComponent} from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +36,6 @@ import { UserFilterPipe } from './pipe-folder/user-filter.pipe';
     FavoriteComponent,
     SerieDetailsComponent,
     EditComponent,
-    UserFilterPipe,
-    // FilterEventPipePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
