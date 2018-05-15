@@ -1,12 +1,6 @@
-<!-- <p> {{userServ.currentUser.username}} </p> -->
-
-<!-- <p> {{list?.category}} </p> -->
-<h3>HELLO LA LISTE ?</h3>
-
-
 <ul>
   <li *ngFor="let oneList of list">
-    <p>{{oneList.category}}</p>
+    <!-- <p>{{oneList.category}}</p> -->
 
     <span *ngIf="oneList.category == 'movie'">
       <h2>{{oneList.details.name}}</h2>
@@ -28,5 +22,6 @@
       <!-- <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}"> -->
       <p>Added to my list on : {{oneList.createdAt | date }}</p>
     </span>
+    <button (click)="deleteClick()" class="btn btn-danger">Delete from my list</button>
   </li>
 </ul>

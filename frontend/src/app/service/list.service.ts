@@ -16,6 +16,12 @@ export class ListService {
       .get('http://localhost:3000/favorite-event/event/billise')
       .toPromise();
   }
+
+  delete(_id) {
+    return this.billise
+      .delete(`http://localhost:3000/favorite-event/event/billise/${_id}`)
+      .toPromise();
+  }
 }
 
 export class List {
