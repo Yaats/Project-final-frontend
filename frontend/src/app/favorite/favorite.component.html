@@ -1,27 +1,42 @@
-<ul>
-  <li *ngFor="let oneList of list">
-    <!-- <p>{{oneList.category}}</p> -->
-
-    <span *ngIf="oneList.category == 'movie'">
-      <h2>{{oneList.details.name}}</h2>
-      <h2>{{oneList.details.title}}</h2>
-      <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}">
-      <p>Added to my list on : {{oneList.createdAt | date }}</p>
-    </span>
-
-    <span *ngIf="oneList.category == 'tv-show'">
-      <h2>{{oneList.details.name}}</h2>
-      <h2>{{oneList.details.title}}</h2>
-      <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}">
-      <p>Added to my list on : {{oneList.createdAt | date }}</p>
-    </span>
+<div class="scroll">
+  <div *ngIf="userServ.currentUser">
 
 
-    <span *ngIf="oneList.category == 'event'">
-      <h2>{{oneList.details.nom}}</h2>
-      <!-- <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}"> -->
-      <p>Added to my list on : {{oneList.createdAt | date }}</p>
-    </span>
-    <button (click)="deleteClick()" class="btn btn-danger">Delete from my list</button>
-  </li>
-</ul>
+
+    <ul>
+      <li *ngFor="let oneList of list">
+        <span *ngIf="oneList.user == userServ.currentUser._id">
+          <!-- <p>{{oneList.category}}</p> -->
+
+          <span *ngIf="oneList.category == 'movie'">
+            <h2>{{oneList.details.name}}</h2>
+            <h2>{{oneList.details.title}}</h2>
+            <p>{{oneList.category | uppercase}}</p>
+            <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}">
+            <p>Added to my list on : {{oneList.createdAt | date }}</p>
+          </span>
+
+          <span *ngIf="oneList.category == 'tv-show'">
+            <h2>{{oneList.details.name}}</h2>
+            <h2>{{oneList.details.title}}</h2>
+            <p>{{oneList.category | uppercase}}</p>
+            <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}">
+            <p>Added to my list on : {{oneList.createdAt | date }}</p>
+          </span>
+
+
+          <span *ngIf="oneList.category == 'event'">
+            <h2>{{oneList.details.nom}}</h2>
+            <p>{{oneList.category | uppercase }}</p>
+
+            <!-- <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}"> -->
+            <p>Added to my list on : {{oneList.createdAt | date }}</p>
+          </span>
+          <button (click)="deleteClick()" class="btn btn-danger">Delete from my list</button>
+        </span>
+      </li>
+    </ul>
+
+
+  </div>
+</div>

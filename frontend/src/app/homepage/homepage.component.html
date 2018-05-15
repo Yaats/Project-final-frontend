@@ -3,23 +3,13 @@
     <h1>You get bored ?</h1>
     <h1>Let’s find something to do ! </h1>
 
-
-    <!-- <span *ngIf="!userTruc.currentUser">
-      <p>
-        <a routerLink="/signup">Sign up</a> to get special content related to you</p>
-    </span> -->
   </div>
-
-  <!-- <p>{{userServ.currentUser ? userServ.currentUser.username : ""}}</p> -->
-
   <div class="card-header2">
     <div class="title">
       <h2>Trending movies</h2>
     </div>
 
     <ul>
-      <!-- <span *ngIf=""> -->
-      <!-- <li *ngFor="let oneLeo of (leonardos | actorFilter: userInput)"> -->
 
       <li *ngFor="let oneMovie of movies">
         <br>
@@ -29,14 +19,11 @@
           <div class="card-body overlay">
             <div class="card-title textuh">
               <p>{{oneMovie.title}}</p>
-              <!-- <p>
-                <b>Release date :</b> {{oneMovie.release_date}}</p> -->
               <a routerLink="/movie-detail/{{oneMovie.id}}" class="btn btn-success">See Details</a>
             </div>
           </div>
         </div>
       </li>
-      <!-- </span> -->
     </ul>
   </div>
 
