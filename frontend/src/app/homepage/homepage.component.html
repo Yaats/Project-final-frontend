@@ -53,7 +53,7 @@
   </div>
 
 
-  <div class="card-header" align="center">
+  <div class="card-header">
     <div class="title">
       <h2>Incoming Events</h2>
     </div>
@@ -62,17 +62,17 @@
       <li *ngFor="let oneEvent of events">
         <br>
         <br>
-        <div class="card card-event">
+        <div class="card card-event bloc">
           <img class="card-img-top" src="{{oneEvent.image.url}}">
-          <div class="card-body">
-            <h5 class="card-title">{{oneEvent.title}}</h5>
-            <p class="card-text">
+          <div class="card-body overlay">
+            <div class="card-title textuh">
+                <strong>{{oneEvent.title}}</strong>
               <!-- <b>Description :</b>
             <span [innerHTML]="oneEvent.html"></span> -->
-              <br>
-              <b>Event date: </b> {{oneEvent.evenements.realDateStart | date}}
-            </p>
-            <a routerLink="/event-detail/{{oneEvent.id}}" class="btn btn-success">See Details</a>
+            <br>
+               <p> Event date: <br> <b>{{oneEvent.evenements.realDateStart | date}}</b></p>
+               <a routerLink="/event-detail/{{oneEvent.id}}" class="btn btn-success">See Details</a>
+            </div>
           </div>
         </div>
       </li>
