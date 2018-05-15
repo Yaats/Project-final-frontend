@@ -16,22 +16,11 @@ export class HomepageComponent implements OnInit {
 
   constructor(
     public apiTruc: MovieTvService,
-    private userServ: UserService,
+    public userServ: UserService,
     public apiTrac: EventService
   ) {}
 
   ngOnInit() {
-    this.userServ
-      .check()
-      .then(userBlah => {
-        console.log("coucou y'a quelqu'un? ", userBlah);
-        console.log(this.userServ.currentUser.email);
-        this.userServ.currentUser = userBlah;
-      })
-      .catch(err => {
-        console.log('app login error', err);
-      });
-
     this.apiTruc
       .getListMovie()
       .then((response: any) => {

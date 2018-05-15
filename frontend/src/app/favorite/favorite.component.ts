@@ -13,7 +13,7 @@ export class FavoriteComponent implements OnInit {
   list: Array<Movie | Event | Serie> = [];
   user: User;
   creds: SignupCredentials = new SignupCredentials();
-  _id: string
+  _id: string;
 
   constructor(public dbList: ListService, private userServ: UserService) {}
 
@@ -36,14 +36,12 @@ export class FavoriteComponent implements OnInit {
     // }
     this.dbList
       .delete(this._id)
-      .then((result) => {
+      .then(result => {
         console.log(result);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log('Fav delete error');
         console.log(err);
       });
   }
-}
-
 }
