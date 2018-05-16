@@ -6,7 +6,6 @@ li {
   list-style-type: none;
 }
 
-
 .card-header2 {
   padding: 10px 10px;
   margin: 10px 10px;
@@ -14,6 +13,12 @@ li {
 }
 
 .card-header3 {
+  padding: 10px 10px;
+  margin: 10px 10px;
+  overflow: scroll;
+}
+
+.card-header4 {
   padding: 10px 10px;
   margin: 10px 10px;
   overflow: scroll;
@@ -86,9 +91,12 @@ section {
 
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; 
+  background: transparent;
 }
 
-.containerMovie , .containerSerie , .containerEvent {
+.containerMovie,
+.containerSerie,
+.containerEvent,
+.containerBooks {
   border: 2px solid grey;
 }

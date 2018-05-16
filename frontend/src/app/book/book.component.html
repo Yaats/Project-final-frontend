@@ -1,3 +1,37 @@
-<p>
-  book works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2>{{bookId?.title}}</h2>
+      <br>
+      <ul>
+        <li *ngFor="let oneAuthor of bookId.authors">
+          <p>
+            <b>Author(s) :</b> {{oneAuthor}}</p>
+        </li>
+      </ul>
+      <p>Published on {{bookId?.publishedDate | date}}</p>
+      <b>Description :</b>
+      <p>{{bookId?.description}}</p>
+
+
+      <ul>
+        <li *ngFor="let oneGenre of bookId.categories">
+          <p>
+            <b>Genre(s) :</b> {{oneGenre}}</p>
+        </li>
+      </ul>
+
+      <p>
+        <b>Vote average :</b> {{bookId?.averageRating}}</p>
+
+
+
+      <span *ngIf="userServ.currentUser">
+        <button class="btn btn-primary" (click)="addListClick()">Add to my list</button>
+        <br>
+        <br>
+      </span>
+
+    </div>
+  </div>
+</div>

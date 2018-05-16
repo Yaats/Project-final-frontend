@@ -72,8 +72,8 @@ export class UserService {
         apiResponse =
           this.currentUser.interestedIn ||
           this.currentUser.interestedInEvent ||
-          console.log(this.currentUser.interestedInEvent);
-        this.currentUser.interestedInSerie;
+          this.currentUser.interestedInSerie ||
+          this.currentUser.interestedInBook;
         return apiResponse;
       });
   }

@@ -34,7 +34,7 @@ export class EventDetailComponent implements OnInit {
       .getEventDetails(this.eventId)
       .then((result: any) => {
         this.event = result.data[0];
-        console.log(this.event);
+        // console.log(this.event);
       })
       .catch(err => {
         console.log('Event details does not work', err);
