@@ -13,9 +13,13 @@ export class MovieTvService {
     return this.apiMovieTv.get(`${environment.backUrl}/movies`).toPromise();
   }
 
-  getMovieReco(movieGenreId) {
+  getMovieReco() {
     return this.apiMovieTv
+<<<<<<< HEAD
       .get(`${environment.backUrl}/${movieGenreId}`)
+=======
+      .get(`http://localhost:3000/reco/movies`, {withCredentials: true})
+>>>>>>> 7d335de2e8ed5eddccb155f46febcecb69071904
       .toPromise();
   }
 

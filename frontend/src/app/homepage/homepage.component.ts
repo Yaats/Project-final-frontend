@@ -14,7 +14,6 @@ export class HomepageComponent implements OnInit {
   series: Serie[] = [];
   moviesReco: Movie[] = [];
   creds: SignupCredentials = new SignupCredentials();
-
   constructor(
     public apiTruc: MovieTvService,
     public userServ: UserService,
@@ -28,6 +27,7 @@ export class HomepageComponent implements OnInit {
         this.creds.interestedIn = this.userServ.currentUser.interestedIn;
         this.creds.interestedInEvent = this.userServ.currentUser.interestedInEvent;
         this.creds.interestedInSerie = this.userServ.currentUser.interestedInSerie;
+        this.getRecos();
       })
       .catch(err => {
         console.log('app login error', err);
@@ -53,14 +53,17 @@ export class HomepageComponent implements OnInit {
     this.apiTruc
       .getListSerie()
       .then((response: any) => {
+        // console.log(this.creds.interestedIn[0]);
         this.series = response.results;
       })
       .catch(err => {
         console.log('pas de db ?? ', err);
       });
+  }
 
+  getRecos() {
     this.apiTruc
-      .getMovieReco(this.creds.interestedIn[0])
+      .getMovieReco()
       .then((response: any) => {
         this.moviesReco = response.results;
       })
