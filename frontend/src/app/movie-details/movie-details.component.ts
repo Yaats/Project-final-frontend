@@ -18,8 +18,8 @@ export class MovieDetailsComponent implements OnInit {
     private reqMdetails: ActivatedRoute,
     public apiMdetails: MovieTvService,
     private resMdetails: Router,
-    private userService: UserService,
-    private listServ: ListService
+    public userService: UserService,
+    public listServ: ListService
   ) {}
 
   ngOnInit() {

@@ -3,7 +3,8 @@ import {HttpClient} from '@angular/common/http';
 import {User, UserService} from './user.service';
 
 import 'rxjs/operator/toPromise';
-import { environment } from '../../environments/environment.prod';
+// import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 
 @Injectable()
@@ -44,4 +45,6 @@ export class Event {
   realDateStart: string;
   nom: string;
   adresse: string;
+  dateStartEvenement: string;
+  small_description: string;
 }

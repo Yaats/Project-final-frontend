@@ -18,8 +18,8 @@ export class EventDetailComponent implements OnInit {
     private reqEdetails: ActivatedRoute,
     public apiEdetails: EventService,
     private resEdetails: Router,
-    private userService: UserService,
-    private listServ: ListService
+    public userService: UserService,
+    public listServ: ListService
   ) {}
 
   ngOnInit() {

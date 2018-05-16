@@ -16,7 +16,11 @@ footer p {
 
 body {
   padding: 20px;
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   background-color: aliceblue;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; 
+}

@@ -4,8 +4,8 @@ import {Movie, Serie} from './movie-tv.service';
 import {Event} from './event.service';
 import 'rxjs/operator/toPromise';
 import {HttpClient} from '@angular/common/http';
-import { environment } from '../../environments/environment.prod';
-
+// import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class ListService {

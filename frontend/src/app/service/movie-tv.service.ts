@@ -2,7 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import 'rxjs/operator/toPromise';
 import {User, UserService} from './user.service';
-import { environment } from '../../environments/environment.prod';
+// import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class MovieTvService {
@@ -97,5 +98,5 @@ export class Serie {
   episode_run_time?: number;
   number_of_episodes?: number;
   genres?: Array<object>;
-  production?: boolean;
+  in_production?: boolean;
 }

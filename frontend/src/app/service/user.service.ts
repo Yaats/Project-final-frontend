@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import 'rxjs/operator/toPromise';
-import { environment } from '../../environments/environment.prod';
+// import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 
 // a faire dans tous les services au moment du passage en prod puis remplacer ${environment.backUrl} par `${environment.backUrl}`

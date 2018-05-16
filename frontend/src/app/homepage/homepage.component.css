@@ -83,3 +83,12 @@ ul li p {
 section {
   overflow: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; 
+}
+
+.containerMovie , .containerSerie , .containerEvent {
+  border: 2px solid grey;
+}

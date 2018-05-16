@@ -16,8 +16,8 @@ export class SerieDetailsComponent implements OnInit {
   constructor(
     private reqSdetails: ActivatedRoute,
     private resSdetails: Router,
-    private userService: UserService,
-    private listServ: ListService,
+    public userService: UserService,
+    public listServ: ListService,
     public apiSdetails: MovieTvService
   ) {}
 
