@@ -26,15 +26,22 @@ export class FavoriteComponent implements OnInit {
   }
 
   deleteClick(oneList) {
+    console.log(oneList);
     const isOkay = confirm(
       'Are you sure you want to delete it from your list?'
     );
     if (!isOkay) {
       return;
     }
-    this.dbList.delete(oneList).then(result => {}).catch(err => {
-      console.log('Fav delete error');
-      console.log(err);
-    });
+    this.dbList
+      .delete(oneList)
+      .then(result => {
+        var index = this.list.indexOf(oneList);
+        result = this.list.splice(index, 1);
+      })
+      .catch(err => {
+        console.log('Fav delete error');
+        console.log(err);
+      });
   }
 }

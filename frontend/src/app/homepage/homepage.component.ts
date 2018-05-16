@@ -22,6 +22,16 @@ export class HomepageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.userServ
+      .check()
+      .then(() => {
+        this.creds.interestedIn = this.userServ.currentUser.interestedIn;
+        this.creds.interestedInEvent = this.userServ.currentUser.interestedInEvent;
+        this.creds.interestedInSerie = this.userServ.currentUser.interestedInSerie;
+      })
+      .catch(err => {
+        console.log('app login error', err);
+      });
     this.apiTruc
       .getListMovie()
       .then((response: any) => {
@@ -50,13 +60,12 @@ export class HomepageComponent implements OnInit {
       });
 
     this.apiTruc
-      .getMovieReco()
+      .getMovieReco(this.creds.interestedIn[0])
       .then((response: any) => {
         this.moviesReco = response.results;
-        console.log(response.results);
       })
       .catch(err => {
         console.log('marchpo reco', err);
-      })
-    }
+      });
+  }
 }

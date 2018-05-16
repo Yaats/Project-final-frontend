@@ -7,12 +7,16 @@
       <p>
         <b>Event date :</b> {{event?.dateStartEvenement | date}}</p>
       <p>
-        <b>Description :</b> <span [innerHTML]="event?.small_description"></span></p>
+        <b>Description :</b>
+        <span [innerHTML]="event?.small_description"></span>
+      </p>
       <p>
         <b>Adress :</b> {{event?.adresse}}</p>
 
       <span *ngIf="userService.currentUser">
         <button class="btn btn-primary" (click)="addListClick()">Add to my list</button>
+        <br>
+        <br>
       </span>
 
     </div>

@@ -66,12 +66,15 @@
           <img class="card-img-top" src="{{oneEvent.image.url}}">
           <div class="card-body overlay">
             <div class="card-title textuh">
-                <strong>{{oneEvent.title}}</strong>
+              <strong>{{oneEvent.title}}</strong>
               <!-- <b>Description :</b>
             <span [innerHTML]="oneEvent.html"></span> -->
-            <br>
-               <p> Event date: <br> <b>{{oneEvent.evenements.realDateStart | date}}</b></p>
-               <a routerLink="/event-detail/{{oneEvent.id}}" class="btn btn-success">See Details</a>
+              <br>
+              <p> Event date:
+                <br>
+                <b>{{oneEvent.evenements.realDateStart | date}}</b>
+              </p>
+              <a routerLink="/event-detail/{{oneEvent.id}}" class="btn btn-success">See Details</a>
             </div>
           </div>
         </div>
@@ -86,7 +89,6 @@
 
     <ul>
       <!-- <span *ngIf=""> -->
-      <!-- <li *ngFor="let oneLeo of (leonardos | actorFilter: userInput)"> -->
 
       <li *ngFor="let oneMovie of moviesReco">
         <br>

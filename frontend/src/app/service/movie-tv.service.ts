@@ -5,14 +5,16 @@ import {User, UserService} from './user.service';
 
 @Injectable()
 export class MovieTvService {
-  constructor(private apiMovieTv: HttpClient, private userThing: UserService) {}
+  constructor(private apiMovieTv: HttpClient, public userThing: UserService) {}
 
   getListMovie() {
     return this.apiMovieTv.get('http://localhost:3000/movies').toPromise();
   }
 
-  getMovieReco() {
-    return this.apiMovieTv.get('http://localhost:3000/reco').toPromise();
+  getMovieReco(movieGenreId) {
+    return this.apiMovieTv
+      .get(`http://localhost:3000/reco/${movieGenreId}`)
+      .toPromise();
   }
 
   getListSerie() {
