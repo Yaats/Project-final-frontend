@@ -54,4 +54,5 @@ export class Event {
   adresse: string;
   dateStartEvenement: string;
   small_description: string;
+  categories: number;
 }
