@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MovieTvService, Movie, Serie} from '../service/movie-tv.service';
 import {EventService, Event} from '../service/event.service';
 import {UserService, SignupCredentials} from '../service/user.service';
+import {BookService, Book} from '../service/book.service';
 
 @Component({
   selector: 'app-homepage',
@@ -12,15 +13,19 @@ export class HomepageComponent implements OnInit {
   movies: Movie[] = [];
   events: Event[] = [];
   series: Serie[] = [];
+  books: Book[] = [];
   moviesReco: Movie[] = [];
   seriesReco: Serie[] = [];
   eventsReco: Event[] = [];
+  booksReco: Book[] = [];
 
   creds: SignupCredentials = new SignupCredentials();
+
   constructor(
     public apiTruc: MovieTvService,
     public userServ: UserService,
-    public apiTrac: EventService
+    public apiTrac: EventService,
+    public apiTric: BookService
   ) {}
 
   ngOnInit() {
@@ -30,9 +35,11 @@ export class HomepageComponent implements OnInit {
         this.creds.interestedIn = this.userServ.currentUser.interestedIn;
         this.creds.interestedInEvent = this.userServ.currentUser.interestedInEvent;
         this.creds.interestedInSerie = this.userServ.currentUser.interestedInSerie;
+        this.creds.interestedInBook = this.userServ.currentUser.interestedInBook;
         this.getMRecos();
         this.getSRecos();
         this.getERecos();
+        // this.getBRecos();
       })
       .catch(err => {
         console.log('app login error', err);
@@ -98,4 +105,15 @@ export class HomepageComponent implements OnInit {
         console.log('marchpo reco', err);
       });
   }
+
+  // getBRecos() {
+  //   this.apiTric
+  //     .getBookReco()
+  //     .then((response: any) => {
+  //       this.booksReco = response;
+  //     })
+  //     .catch(err => {
+  //       console.log('marchpo reco', err);
+  //     });
+  // }
 }

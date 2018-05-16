@@ -21,6 +21,8 @@ import {FavoriteComponent} from './favorite/favorite.component';
 import {ListService} from './service/list.service';
 import {SerieDetailsComponent} from './serie-details/serie-details.component';
 import {EditComponent} from './edit/edit.component';
+import {BookService} from './service/book.service';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import {EditComponent} from './edit/edit.component';
     FavoriteComponent,
     SerieDetailsComponent,
     EditComponent,
+    BookComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
@@ -44,6 +47,7 @@ import {EditComponent} from './edit/edit.component';
     MusicService,
     EventService,
     ListService,
+    BookService,
   ],
   bootstrap: [AppComponent],
 })
