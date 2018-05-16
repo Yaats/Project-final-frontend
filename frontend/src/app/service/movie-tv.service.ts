@@ -11,9 +11,9 @@ export class MovieTvService {
     return this.apiMovieTv.get('http://localhost:3000/movies').toPromise();
   }
 
-  getMovieReco(movieGenreId) {
+  getMovieReco() {
     return this.apiMovieTv
-      .get(`http://localhost:3000/reco/${movieGenreId}`)
+      .get(`http://localhost:3000/reco/movies`, {withCredentials: true})
       .toPromise();
   }
 
