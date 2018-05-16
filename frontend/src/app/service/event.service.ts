@@ -3,18 +3,20 @@ import {HttpClient} from '@angular/common/http';
 import {User, UserService} from './user.service';
 
 import 'rxjs/operator/toPromise';
+import { environment } from '../../environments/environment.prod';
+
 
 @Injectable()
 export class EventService {
   constructor(private apiEvent: HttpClient) {}
 
   getListEvent() {
-    return this.apiEvent.get('http://localhost:3000/events').toPromise();
+    return this.apiEvent.get(`${environment.backUrl}/events`).toPromise();
   }
 
   getEventDetails(eventId) {
     return this.apiEvent
-      .get(`http://localhost:3000/event-detail/${eventId}`)
+      .get(`${environment.backUrl}/event-detail/${eventId}`)
       .toPromise();
   }
 
@@ -22,7 +24,7 @@ export class EventService {
 
   addSomething(eventInfo, category) {
     return this.apiEvent
-      .post(`http://localhost:3000/favorite-event/${category}`, eventInfo, {
+      .post(`${environment.backUrl}/favorite-event/${category}`, eventInfo, {
         withCredentials: true,
       })
       .toPromise()

@@ -2,30 +2,31 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import 'rxjs/operator/toPromise';
 import {User, UserService} from './user.service';
+import { environment } from '../../environments/environment.prod';
 
 @Injectable()
 export class MovieTvService {
   constructor(private apiMovieTv: HttpClient, public userThing: UserService) {}
 
   getListMovie() {
-    return this.apiMovieTv.get('http://localhost:3000/movies').toPromise();
+    return this.apiMovieTv.get(`${environment.backUrl}/movies`).toPromise();
   }
 
   getMovieReco(movieGenreId) {
     return this.apiMovieTv
-      .get(`http://localhost:3000/reco/${movieGenreId}`)
+      .get(`${environment.backUrl}/${movieGenreId}`)
       .toPromise();
   }
 
   getListSerie() {
-    return this.apiMovieTv.get('http://localhost:3000/series').toPromise();
+    return this.apiMovieTv.get(`${environment.backUrl}/series`).toPromise();
   }
 
   // Get movies details
 
   getDetails(movieId) {
     return this.apiMovieTv
-      .get(`http://localhost:3000/movie-detail/${movieId}`)
+      .get(`${environment.backUrl}/movie-detail/${movieId}`)
       .toPromise();
   }
 
@@ -33,7 +34,7 @@ export class MovieTvService {
 
   getDetailsSerie(serieId) {
     return this.apiMovieTv
-      .get(`http://localhost:3000/serie-detail/${serieId}`)
+      .get(`${environment.backUrl}/serie-detail/${serieId}`)
       .toPromise();
   }
 
@@ -41,7 +42,7 @@ export class MovieTvService {
 
   addSomething(movieInfo, category) {
     return this.apiMovieTv
-      .post(`http://localhost:3000/favorite-event/movie`, movieInfo, {
+      .post(`${environment.backUrl}/favorite-event/movie`, movieInfo, {
         withCredentials: true,
       })
       .toPromise()
@@ -55,7 +56,7 @@ export class MovieTvService {
 
   addSomethingS(serieInfo, category) {
     return this.apiMovieTv
-      .post(`http://localhost:3000/favorite-event/tv-show`, serieInfo, {
+      .post(`${environment.backUrl}/favorite-event/tv-show`, serieInfo, {
         withCredentials: true,
       })
       .toPromise()

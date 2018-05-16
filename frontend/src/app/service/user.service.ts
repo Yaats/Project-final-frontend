@@ -1,8 +1,10 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import 'rxjs/operator/toPromise';
+import { environment } from '../../environments/environment.prod';
 
-// a faire dans tous les services au moment du passage en prod puis remplacer http://localhost:3000 par `${environment.backUrl}`
+
+// a faire dans tous les services au moment du passage en prod puis remplacer ${environment.backUrl} par `${environment.backUrl}`
 // import {environment} from "../../environments/environment"
 
 @Injectable()
@@ -15,7 +17,7 @@ export class UserService {
 
   check() {
     return this.ajaxTruc
-      .get('http://localhost:3000/api/checklogin', {withCredentials: true})
+      .get(`${environment.backUrl}/api/checklogin`, {withCredentials: true})
       .toPromise()
       .then((apiResponse: any) => {
         this.currentUser = apiResponse.userInfo;
@@ -26,7 +28,7 @@ export class UserService {
   // POST /signup
   postSignup(credsSign: SignupCredentials) {
     return this.ajaxTruc
-      .post('http://localhost:3000/api/signup', credsSign, {
+      .post(`${environment.backUrl}/api/signup`, credsSign, {
         withCredentials: true,
       })
       .toPromise()
@@ -40,7 +42,7 @@ export class UserService {
 
   postLogin(creds: LoginCredentials) {
     return this.ajaxTruc
-      .post('http://localhost:3000/api/login', creds, {withCredentials: true})
+      .post(`${environment.backUrl}/api/login`, creds, {withCredentials: true})
       .toPromise()
       .then((apiResponse: any) => {
         this.currentUser = apiResponse.userInfo;
@@ -51,7 +53,7 @@ export class UserService {
 
   logout() {
     return this.ajaxTruc
-      .get('http://localhost:3000/api/logout', {withCredentials: true})
+      .get(`${environment.backUrl}/api/logout`, {withCredentials: true})
       .toPromise()
       .then((apiResponse: any) => {
         this.currentUser = apiResponse.userInfo;
@@ -62,7 +64,7 @@ export class UserService {
   //  EDIT PROFILE
   postEdit(creds: SignupCredentials) {
     return this.ajaxTruc
-      .put('http://localhost:3000/api/edit', creds, {
+      .put(`${environment.backUrl}/api/edit`, creds, {
         withCredentials: true,
       })
       .toPromise()

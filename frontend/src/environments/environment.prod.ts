@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  // backUrl: ""
+  backUrl: ""
 };
 
 // empty string before all / where loclahost:3000 was

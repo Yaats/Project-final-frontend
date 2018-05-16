@@ -4,6 +4,8 @@ import {Movie, Serie} from './movie-tv.service';
 import {Event} from './event.service';
 import 'rxjs/operator/toPromise';
 import {HttpClient} from '@angular/common/http';
+import { environment } from '../../environments/environment.prod';
+
 
 @Injectable()
 export class ListService {
@@ -13,14 +15,14 @@ export class ListService {
 
   getList() {
     return this.billise
-      .get('http://localhost:3000/favorite-event/event/billise')
+      .get(`${environment.backUrl}/favorite-event/event/billise`)
       .toPromise();
   }
 
   delete(itemId) {
     return this.billise
       .delete(
-        `http://localhost:3000/favorite-event/${itemId.category}/billise/${itemId._id}`
+        `${environment.backUrl}/favorite-event/${itemId.category}/billise/${itemId._id}`
       )
       .toPromise();
   }
