@@ -13,6 +13,9 @@ export class HomepageComponent implements OnInit {
   events: Event[] = [];
   series: Serie[] = [];
   moviesReco: Movie[] = [];
+  seriesReco: Serie[] = [];
+  eventsReco: Event[] = [];
+
   creds: SignupCredentials = new SignupCredentials();
   constructor(
     public apiTruc: MovieTvService,
@@ -27,7 +30,9 @@ export class HomepageComponent implements OnInit {
         this.creds.interestedIn = this.userServ.currentUser.interestedIn;
         this.creds.interestedInEvent = this.userServ.currentUser.interestedInEvent;
         this.creds.interestedInSerie = this.userServ.currentUser.interestedInSerie;
-        this.getRecos();
+        this.getMRecos();
+        this.getSRecos();
+        this.getERecos();
       })
       .catch(err => {
         console.log('app login error', err);
@@ -61,11 +66,33 @@ export class HomepageComponent implements OnInit {
       });
   }
 
-  getRecos() {
+  getMRecos() {
     this.apiTruc
       .getMovieReco()
       .then((response: any) => {
         this.moviesReco = response.results;
+      })
+      .catch(err => {
+        console.log('marchpo reco', err);
+      });
+  }
+
+  getSRecos() {
+    this.apiTruc
+      .getSerieReco()
+      .then((response: any) => {
+        this.seriesReco = response.results;
+      })
+      .catch(err => {
+        console.log('marchpo reco', err);
+      });
+  }
+
+  getERecos() {
+    this.apiTrac
+      .getEventReco()
+      .then((response: any) => {
+        this.eventsReco = response.data;
       })
       .catch(err => {
         console.log('marchpo reco', err);

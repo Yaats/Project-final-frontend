@@ -4,8 +4,7 @@ import {User, UserService} from './user.service';
 
 import 'rxjs/operator/toPromise';
 // import { environment } from '../../environments/environment.prod';
-import { environment } from '../../environments/environment';
-
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class EventService {
@@ -13,6 +12,14 @@ export class EventService {
 
   getListEvent() {
     return this.apiEvent.get(`${environment.backUrl}/events`).toPromise();
+  }
+
+  // get events reco
+
+  getEventReco() {
+    return this.apiEvent
+      .get(`${environment.backUrl}/reco/events`, {withCredentials: true})
+      .toPromise();
   }
 
   getEventDetails(eventId) {

@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import 'rxjs/operator/toPromise';
 import {User, UserService} from './user.service';
 // import { environment } from '../../environments/environment.prod';
-import { environment } from '../../environments/environment';
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class MovieTvService {
@@ -13,13 +13,11 @@ export class MovieTvService {
     return this.apiMovieTv.get(`${environment.backUrl}/movies`).toPromise();
   }
 
+  // get movies reco
+
   getMovieReco() {
     return this.apiMovieTv
-<<<<<<< HEAD
-      .get(`${environment.backUrl}/${movieGenreId}`)
-=======
-      .get(`http://localhost:3000/reco/movies`, {withCredentials: true})
->>>>>>> 7d335de2e8ed5eddccb155f46febcecb69071904
+      .get(`${environment.backUrl}/reco/movies`, {withCredentials: true})
       .toPromise();
   }
 
@@ -27,6 +25,13 @@ export class MovieTvService {
     return this.apiMovieTv.get(`${environment.backUrl}/series`).toPromise();
   }
 
+  // get serie reco
+
+  getSerieReco() {
+    return this.apiMovieTv
+      .get(`${environment.backUrl}/reco/series`, {withCredentials: true})
+      .toPromise();
+  }
   // Get movies details
 
   getDetails(movieId) {
