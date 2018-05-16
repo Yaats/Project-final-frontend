@@ -9,8 +9,7 @@
 
 
 
-
-  <div *ngIf="userServ.currentUser">
+  <div *ngIf="userServ.currentUser" onload="load()">
     things you should like...
 
     <br>
@@ -137,7 +136,7 @@
   </div>
 
 
-  <div *ngIf="!userServ.currentUser">
+  <div *ngIf="!userServ.currentUser" onload="load()">
     all things
     <div class="containerMovie">
       <br>
@@ -282,3 +281,5 @@
 <br>
 <br>
 <br>
+
+<!-- <meta http-equiv="refresh" content="300"> -->
