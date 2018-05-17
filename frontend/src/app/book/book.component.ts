@@ -10,7 +10,7 @@ import {Router, ActivatedRoute} from '@angular/router';
   styleUrls: ['./book.component.css'],
 })
 export class BookComponent implements OnInit {
-  bookId: Object;
+  bookId: any = [];
   book: Book;
   title: string;
 
