@@ -16,6 +16,13 @@
             <p>Added to my list on : {{oneList.createdAt | date }}</p>
           </span>
 
+          <span *ngIf="oneList.category == 'book'">
+            <h2>{{oneList.details.title}}</h2>
+            <p>{{oneList.category | uppercase}}</p>
+            <img *ngIf="oneList.details?.thumbnail" src="{{oneList.details.thumbnail}}">
+            <p>Added to my list on : {{oneList.createdAt | date }}</p>
+          </span>
+
           <span *ngIf="oneList.category == 'tv-show'">
             <h2>{{oneList.details.name}}</h2>
             <h2>{{oneList.details.title}}</h2>
