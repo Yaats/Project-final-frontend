@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 footer {
-  background-color: #343a40;
+  background: rgba(0,0,0,.6);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -8,6 +8,7 @@ footer {
   height: 30px;
   text-align: center;
   color: #ccc;
+  text-decoration: none;
 }
 
 footer p {
@@ -17,10 +18,22 @@ footer p {
 body {
   padding: 20px;
   font-family: 'Fjalla One', sans-serif;
-  background-color: aliceblue;
+  background-image: url(./assets/blur-26347-27038-hd-wallpapers.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: aliceblue;
 }
 
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ccc;
+}
+
+a {
+  color: #ccc;
 }
