@@ -28,7 +28,8 @@ li {
   padding: 10px 10px;
   margin: 10px 10px;
   overflow: scroll;
-  background-color: aliceblue;
+  border: none;
+  background-color: transparent;
 }
 
 .card-text {
@@ -98,5 +99,5 @@ section {
 .containerSerie,
 .containerEvent,
 .containerBooks {
-  border: 2px solid grey;
+  border: 2px solid black;
 }

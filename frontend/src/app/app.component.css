@@ -6,10 +6,30 @@
   position: absolute;
 }
 
-nav h3 {
-  color: white;
-}
 
 body {
   overflow: hidden;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: aliceblue;
+}
+
+nav {
+  background: rgba(0,0,0,.4);
+}
+
+.dropdown-menu {
+  background: rgba(0,0,0,.4);
+  color: aliceblue;  
+  min-width: 7em;
+}
+
+a.dropdown-item {
+  color: aliceblue;
+  text-align: center;
+}
+
+.dropdown-menu-right {
+  top: 80px;
 }
