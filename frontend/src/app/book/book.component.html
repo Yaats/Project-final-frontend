@@ -1,21 +1,22 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      <h2>{{bookId?.title}}</h2>
+      <h1> <b> {{bookId?.title}} </b></h1>
       <br>
       <ul>
-        <b>Author(s) :</b>
+        <h4> <b>Author(s) :</b></h4>
         <li *ngFor="let oneAuthor of bookId.authors">
           <p>{{oneAuthor}}</p>
         </li>
       </ul>
       <p>Published on {{bookId?.publishedDate | date}}</p>
-      <b>Description :</b>
-      <p>{{bookId?.description}}</p>
+      <h4> <b>Description :</b></h4>
+      <b>{{bookId?.description}}</b>
 
 
       <ul>
-        <b>Genre(s) :</b>
+        <br>
+        <h4> <b>Genre(s) :</b> </h4>
         <li *ngFor="let oneGenre of bookId.categories">
           <p>{{oneGenre}}</p>
 

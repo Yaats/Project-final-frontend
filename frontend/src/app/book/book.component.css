@@ -8,5 +8,10 @@ img {
 .container {
   margin-top: 30px;
   text-align: justify;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.4);
+}
+
+.row {
+  padding: 5%;
+  margin-bottom: 10px;
 }

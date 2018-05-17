@@ -2,14 +2,15 @@
   <div class="row">
 
     <div class="col-sm">
-      <h2>{{event?.nom}}</h2>
+      <h1> <b> {{event?.nom}} </b> </h1>
       <br>
-      <p>
-        <b>Event date :</b> {{event?.dateStartEvenement | date}}</p>
-      <p>
+      <h4>
+        <b>Event date :</b> {{event?.dateStartEvenement | date}}</h4>
+        <br>
+      <h4>
         <b>Description :</b>
+      </h4>
         <span [innerHTML]="event?.small_description"></span>
-      </p>
       <p>
         <b>Adress :</b> {{event?.adresse}}</p>
 

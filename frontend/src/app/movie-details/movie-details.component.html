@@ -2,26 +2,28 @@
   <div class="row">
 
     <div class="col-sm">
-      <h2>{{movie?.title}}</h2>
-      <p>
-        <b>Release date :</b> {{movie?.release_date | date}}</p>
-      <p>
-        <b>Synopsis :</b> {{movie?.overview}}</p>
+      <h1><b> {{movie?.title}} </b></h1>
+      <h5>
+        <b>Release date :</b> {{movie?.release_date | date}}
+      </h5>
+      <br>
+       <h5> <b>Synopsis :</b></h5> {{movie?.overview}}
 
 
       <ul>
-        <p>
+        <h5>
+          <br>
           <b>Genre(s) :</b>
-        </p>
-        <li *ngFor="let oneGenre of movie.genres">
-          <p>{{oneGenre.name}}</p>
+        </h5>
+        <li *ngFor="let oneGenre of movie.genres" align="center">
+          <button class="btn">{{oneGenre.name}}</button>
         </li>
       </ul>
 
       <p>{{movie?.runtime}} min</p>
 
-      <p>
-        <b>Vote average :</b> {{movie?.vote_average}}</p>
+      
+        <h5> <b>Vote average :</b> {{movie?.vote_average}}</h5> 
 
       <span *ngIf="movie?.belongs_to_collection">
         <p>

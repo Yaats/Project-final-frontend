@@ -2,28 +2,30 @@
   <div class="row">
 
     <div class="col-sm">
-      <h2>{{serie?.name}}</h2>
-      <p>
-        <b>Release date :</b> {{serie?.first_air_date | date}}</p>
-
+      <h1> <b> {{serie?.name}} </b> </h1>
+      <h5>
+        <b>Release date :</b> {{serie?.first_air_date | date}}
+      </h5>
+<br>
       <p *ngIf="serie.in_production == true">
 
         <i>{{serie.name}}</i>
         <b>is still in production</b>
       </p>
-      <p>
-        <b>Description :</b> {{serie?.overview}}</p>
+      <h5>
+        <b>Description :</b></h5> {{serie?.overview}}
 
       <ul>
-        <p>
+        <h5>
+          <br>
           <b>Genre(s) :</b>
-        </p>
+        </h5>
         <li *ngFor="let oneGenre of serie.genres">
-          <p>{{oneGenre.name}}</p>
+          <button class="btn">{{oneGenre.name}}</button>
         </li>
       </ul>
-      <p>
-        <b>Vote average :</b> {{serie?.vote_average}}</p>
+      <h5>
+        <b>Vote average :</b> {{serie?.vote_average}}</h5>
       <p>{{serie?.number_of_seasons}} seasons - {{serie?.number_of_episodes}} episodes</p>
       <p>
         <b>Runtime : </b>{{serie?.episode_run_time}} min</p>
