@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {BookService, Book} from '../service/book.service';
-import {UserService} from '../service/user.service';
-import {ListService} from '../service/list.service';
+import {UserService, User} from '../service/user.service';
+import {ListService, List} from '../service/list.service';
 import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -10,8 +10,9 @@ import {Router, ActivatedRoute} from '@angular/router';
   styleUrls: ['./book.component.css'],
 })
 export class BookComponent implements OnInit {
-  bookId: Array<Object> = [] ;
+  bookId: string ;
   book: Book;
+  userList: Array<string>;
 
   constructor(
     public userServ: UserService,
@@ -32,7 +33,7 @@ export class BookComponent implements OnInit {
     this.apiBdetails
       .getBookDetails(this.bookId)
       .then((result: any) => {
-        this.bookId = result[0];
+        this.bookId = result;
         console.log(this.bookId);
       })
       .catch(err => {
