@@ -10,8 +10,9 @@ import {Router, ActivatedRoute} from '@angular/router';
   styleUrls: ['./book.component.css'],
 })
 export class BookComponent implements OnInit {
-  bookId: Array<Object> = [] ;
+  bookId: Object;
   book: Book;
+  title: string;
 
   constructor(
     public userServ: UserService,
@@ -41,14 +42,15 @@ export class BookComponent implements OnInit {
   }
 
   addListClick() {
-    const {title} = this.book;
-    const isOk = confirm(`Are you sure you wanna add ${title} to your list ? `);
+    console.log('je suis là', this.bookId);
+
+    const isOk = confirm(`Are you sure you wanna add this to your list ? `);
     if (!isOk) {
       return;
     } else {
-      this.listServ.currentList.allItems.push(this.book);
+      this.listServ.currentList.allItems.push(this.bookId);
       this.apiBdetails
-        .addSomething(this.book, 'book')
+        .addSomething(this.bookId, 'book')
         .then(result => {})
         .catch(err => {
           console.log(err);
