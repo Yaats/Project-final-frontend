@@ -32,6 +32,7 @@
             <!-- <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}"> -->
             <p>Added to my list on : {{oneList.createdAt | date }}</p>
           </span>
+
           <button (click)="deleteClick(oneList)" class="btn btn-danger">Delete from my list</button>
         </span>
       </li>
