@@ -4,9 +4,6 @@ import 'rxjs/operator/toPromise';
 // import { environment } from '../../environments/environment.prod';
 import {environment} from '../../environments/environment';
 
-// a faire dans tous les services au moment du passage en prod puis remplacer ${environment.backUrl} par `${environment.backUrl}`
-// import {environment} from "../../environments/environment"
-
 @Injectable()
 export class UserService {
   currentUser: User;

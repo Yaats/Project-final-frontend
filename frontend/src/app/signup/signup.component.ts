@@ -63,5 +63,6 @@ export class SignupComponent implements OnInit {
     } else {
       this.formCreds.interestedInBook.splice(index, 1);
     }
+    // console.log(index);
   }
 }

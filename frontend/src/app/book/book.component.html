@@ -4,9 +4,9 @@
       <h2>{{bookId?.title}}</h2>
       <br>
       <ul>
+        <b>Author(s) :</b>
         <li *ngFor="let oneAuthor of bookId.authors">
-          <p>
-            <b>Author(s) :</b> {{oneAuthor}}</p>
+          <p>{{oneAuthor}}</p>
         </li>
       </ul>
       <p>Published on {{bookId?.publishedDate | date}}</p>
@@ -15,15 +15,12 @@
 
 
       <ul>
+        <b>Genre(s) :</b>
         <li *ngFor="let oneGenre of bookId.categories">
-          <p>
-            <b>Genre(s) :</b> {{oneGenre}}</p>
+          <p>{{oneGenre}}</p>
+
         </li>
       </ul>
-
-      <p>
-        <b>Vote average :</b> {{bookId?.averageRating}}</p>
-
 
 
       <span *ngIf="userServ.currentUser">
@@ -32,6 +29,10 @@
         <br>
       </span>
 
+    </div>
+
+    <div class="col-sm">
+      <img *ngIf="bookId?.thumbnail" src="{{bookId?.thumbnail}}">
     </div>
   </div>
 </div>
