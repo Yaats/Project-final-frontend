@@ -128,6 +128,31 @@
 
       <br>
 
+
+      <p>I enjoy
+        <b>books</b> like :</p>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInBook.includes('drama')" (change)="updateProfileBook('drama')" name="interestedInBook[16]"
+          id="sadBook" value="sadBook"> The one that tell sad stories
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInBook.includes('thrillers')" (change)="updateProfileBook('thrillers')"
+          name="interestedInBook[17]" id="policeBook" value="policeBook"> The one where someone is muredered and we have to find who did it
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInBook.includes('love')" (change)="updateProfileBook('love')" name="interestedInBook[18]"
+          id="loveBook" value="loveBook"> The one that finish happily ever after
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInBook.includes('biography')" (change)="updateProfileBook('biography')"
+          name="interestedInBook[19]" id="bioBook" value="bioBook"> The one that tell true story about someone
+      </label>
+
+
       <button class="btn btn-success">Update my Profile</button>
     </div>
   </div>

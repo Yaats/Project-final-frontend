@@ -6,7 +6,6 @@ li {
   list-style-type: none;
 }
 
-
 .card-header2 {
   padding: 10px 10px;
   margin: 10px 10px;
@@ -14,6 +13,12 @@ li {
 }
 
 .card-header3 {
+  padding: 10px 10px;
+  margin: 10px 10px;
+  overflow: scroll;
+}
+
+.card-header4 {
   padding: 10px 10px;
   margin: 10px 10px;
   overflow: scroll;
@@ -87,9 +92,18 @@ section {
 
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; 
+  background: transparent;
 }
 
+<<<<<<< HEAD
 .containerMovie , .containerSerie , .containerEvent {
   border: 2px solid black;
 }
+=======
+.containerMovie,
+.containerSerie,
+.containerEvent,
+.containerBooks {
+  border: 2px solid grey;
+}
+>>>>>>> 480abbe28d30a218e674545d2bb048c542cef5b9

@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 footer {
+<<<<<<< HEAD
   background: rgba(0,0,0,.6);
+=======
+  background-color: #212529;
+>>>>>>> 480abbe28d30a218e674545d2bb048c542cef5b9
   position: fixed;
   bottom: 0;
   left: 0;
@@ -15,6 +19,9 @@ footer p {
   line-height: 100%;
 }
 
+footer  a {
+  color: #ccc;
+}
 body {
   padding: 20px;
   font-family: 'Fjalla One', sans-serif;

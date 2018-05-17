@@ -11,6 +11,7 @@ import {AboutUsComponent} from './about-us/about-us.component';
 import {SerieDetailsComponent} from './serie-details/serie-details.component';
 import {EditComponent} from './edit/edit.component';
 import {FavoriteComponent} from './favorite/favorite.component';
+import {BookComponent} from './book/book.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -19,11 +20,11 @@ const routes: Routes = [
   {path: 'search', component: SearchComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'edit', component: EditComponent},
+  {path: 'favorite', component: FavoriteComponent},
   {path: 'movie-detail/:movieId', component: MovieDetailsComponent},
+  {path: 'book-detail/:bookId', component: BookComponent},
   {path: 'event-detail/:eventId', component: EventDetailComponent},
   {path: 'serie-detail/:serieId', component: SerieDetailsComponent},
-  {path: 'favorite', component: FavoriteComponent},
-
   {path: '**', component: NotFoundComponent},
 ];
 

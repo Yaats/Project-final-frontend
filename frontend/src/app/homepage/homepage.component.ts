@@ -39,11 +39,14 @@ export class HomepageComponent implements OnInit {
         this.getMRecos();
         this.getSRecos();
         this.getERecos();
-        // this.getBRecos();
+        this.getBRecos();
       })
       .catch(err => {
         console.log('app login error', err);
       });
+
+    // Display home page movies / seies / events / books
+
     this.apiTruc
       .getListMovie()
       .then((response: any) => {
@@ -65,13 +68,23 @@ export class HomepageComponent implements OnInit {
     this.apiTruc
       .getListSerie()
       .then((response: any) => {
-        // console.log(this.creds.interestedIn[0]);
         this.series = response.results;
       })
       .catch(err => {
         console.log('pas de db ?? ', err);
       });
+
+    this.apiTric
+      .getListBook()
+      .then((response: any) => {
+        this.books = response;
+      })
+      .catch(err => {
+        console.log('pas de db ?? ', err);
+      });
   }
+
+  // Display home page movies filtered / seies filtered / events filtered / books filtered
 
   getMRecos() {
     this.apiTruc
@@ -80,7 +93,7 @@ export class HomepageComponent implements OnInit {
         this.moviesReco = response.results;
       })
       .catch(err => {
-        console.log('marchpo reco', err);
+        console.log('marchpo reco M', err);
       });
   }
 
@@ -91,7 +104,7 @@ export class HomepageComponent implements OnInit {
         this.seriesReco = response.results;
       })
       .catch(err => {
-        console.log('marchpo reco', err);
+        console.log('marchpo reco S', err);
       });
   }
 
@@ -102,18 +115,18 @@ export class HomepageComponent implements OnInit {
         this.eventsReco = response.data;
       })
       .catch(err => {
-        console.log('marchpo reco', err);
+        console.log('marchpo reco E', err);
       });
   }
 
-  // getBRecos() {
-  //   this.apiTric
-  //     .getBookReco()
-  //     .then((response: any) => {
-  //       this.booksReco = response;
-  //     })
-  //     .catch(err => {
-  //       console.log('marchpo reco', err);
-  //     });
-  // }
+  getBRecos() {
+    this.apiTric
+      .getBookReco()
+      .then((response: any) => {
+        this.booksReco = response;
+      })
+      .catch(err => {
+        console.log('marchpo reco B', err);
+      });
+  }
 }

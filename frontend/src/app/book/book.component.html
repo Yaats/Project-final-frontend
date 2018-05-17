@@ -1,3 +1,38 @@
-<p>
-  book works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2>{{bookId?.title}}</h2>
+      <br>
+      <ul>
+        <b>Author(s) :</b>
+        <li *ngFor="let oneAuthor of bookId.authors">
+          <p>{{oneAuthor}}</p>
+        </li>
+      </ul>
+      <p>Published on {{bookId?.publishedDate | date}}</p>
+      <b>Description :</b>
+      <p>{{bookId?.description}}</p>
+
+
+      <ul>
+        <b>Genre(s) :</b>
+        <li *ngFor="let oneGenre of bookId.categories">
+          <p>{{oneGenre}}</p>
+
+        </li>
+      </ul>
+
+
+      <span *ngIf="userServ.currentUser">
+        <button class="btn btn-primary" (click)="addListClick()">Add to my list</button>
+        <br>
+        <br>
+      </span>
+
+    </div>
+
+    <div class="col-sm">
+      <img *ngIf="bookId?.thumbnail" src="{{bookId?.thumbnail}}">
+    </div>
+  </div>
+</div>

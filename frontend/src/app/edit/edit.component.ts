@@ -20,6 +20,7 @@ export class EditComponent implements OnInit {
         this.creds.interestedIn = this.userServ.currentUser.interestedIn;
         this.creds.interestedInEvent = this.userServ.currentUser.interestedInEvent;
         this.creds.interestedInSerie = this.userServ.currentUser.interestedInSerie;
+        this.creds.interestedInBook = this.userServ.currentUser.interestedInBook;
       })
       .catch(err => {
         console.log('app login error', err);
@@ -63,6 +64,16 @@ export class EditComponent implements OnInit {
       this.creds.interestedInEvent.push(interest);
     } else {
       this.creds.interestedInEvent.splice(index, 1);
+    }
+  }
+
+  updateProfileBook(interest) {
+    const index = this.creds.interestedInBook.indexOf(interest);
+    // console.log(this.userServ.currentUser.interestedIn);
+    if (index === -1) {
+      this.creds.interestedInBook.push(interest);
+    } else {
+      this.creds.interestedInBook.splice(index, 1);
     }
   }
 }

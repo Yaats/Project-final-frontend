@@ -5,7 +5,8 @@ import {Event} from './event.service';
 import 'rxjs/operator/toPromise';
 import {HttpClient} from '@angular/common/http';
 // import { environment } from '../../environments/environment.prod';
-import { environment } from '../../environments/environment';
+import {environment} from '../../environments/environment';
+import {Book} from './book.service';
 
 @Injectable()
 export class ListService {
@@ -30,7 +31,7 @@ export class ListService {
 
 export class List {
   user?: object;
-  allItems?: Array<Movie | Event | Serie> = [];
+  allItems?: Array<Movie | Event | Serie | Book> = [];
   // currentUserId: number;
   // movieTitle: string;
   // movieRelease_date: string;

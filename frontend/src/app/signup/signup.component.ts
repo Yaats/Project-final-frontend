@@ -54,4 +54,15 @@ export class SignupComponent implements OnInit {
       this.formCreds.interestedInEvent.splice(index, 1);
     }
   }
+
+  updateInterestsBook(interest) {
+    const index = this.formCreds.interestedInBook.indexOf(interest);
+
+    if (index === -1) {
+      this.formCreds.interestedInBook.push(interest);
+    } else {
+      this.formCreds.interestedInBook.splice(index, 1);
+    }
+    // console.log(index);
+  }
 }

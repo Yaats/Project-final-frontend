@@ -12,14 +12,16 @@
 
 
   <div *ngIf="userServ.currentUser" onload="load()">
-    things you should like...
-
     <br>
     <br>
 
     <div class="containerMovie">
       <br>
+<<<<<<< HEAD
       <h2 align="center">Trending movies you could like</h2>
+=======
+      <h1 align="center">Trending movies you could like</h1>
+>>>>>>> 480abbe28d30a218e674545d2bb048c542cef5b9
       <div class="card-header2">
         <div class="title">
         </div>
@@ -108,11 +110,38 @@
         </ul>
       </div>
     </div>
+
+    <br>
+    <br>
+    <div class="containerBooks">
+      <br>
+      <h1 align="center">Latest books you could like </h1>
+      <div class="card-header4">
+        <div class="title">
+        </div>
+
+        <ul>
+
+          <li *ngFor="let oneBook of booksReco">
+            <br>
+            <br>
+            <div class="card card-movie bloc">
+              <img class="card-img-top " src="{{oneBook.thumbnail}}">
+              <div class="card-body overlay">
+                <div class="card-title textuh">
+                  <p>{{oneBook.title}}</p>
+                  <a routerLink="/book-detail/{{oneBook.industryIdentifiers[1].identifier}}" class="btn btn-success">See Details</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
 
   <div *ngIf="!userServ.currentUser" onload="load()">
-    all things
     <div class="containerMovie">
       <br>
       <h2 align="center">Trending movies</h2>
@@ -190,6 +219,33 @@
                     <b>{{oneEvent.evenements.realDateStart | date}}</b>
                   </p>
                   <a routerLink="/event-detail/{{oneEvent.id}}" class="btn btn-success">See Details</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="containerBooks">
+      <br>
+      <h1 align="center">Latest books</h1>
+      <div class="card-header4">
+        <div class="title">
+        </div>
+
+        <ul>
+
+          <li *ngFor="let oneBook of books">
+            <br>
+            <br>
+            <div class="card card-movie bloc">
+              <img class="card-img-top " src="{{oneBook.thumbnail}}">
+              <div class="card-body overlay">
+                <div class="card-title textuh">
+                  <p>{{oneBook.title}}</p>
+                  <a routerLink="/book-detail/{{oneBook.industryIdentifiers[1].identifier}}" class="btn btn-success">See Details</a>
                 </div>
               </div>
             </div>
