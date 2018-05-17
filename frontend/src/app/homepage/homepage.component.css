@@ -95,15 +95,9 @@ section {
   background: transparent;
 }
 
-<<<<<<< HEAD
-.containerMovie , .containerSerie , .containerEvent {
-  border: 2px solid black;
-}
-=======
 .containerMovie,
 .containerSerie,
 .containerEvent,
 .containerBooks {
-  border: 2px solid grey;
+  border: 2px solid black;
 }
->>>>>>> 480abbe28d30a218e674545d2bb048c542cef5b9

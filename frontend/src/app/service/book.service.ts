@@ -49,6 +49,7 @@ export class Book {
   title?: string;
   imageLinks?: object;
   categories?: Array<string>;
+  thumbnail: string;
   publishedDate?: string;
   averageRating?: number;
   industryIdentifiers?: Array<object>;
