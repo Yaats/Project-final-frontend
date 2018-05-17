@@ -33,7 +33,7 @@ export class BookComponent implements OnInit {
       .getBookDetails(this.bookId)
       .then((result: any) => {
         this.bookId = result[0];
-        console.log(this.bookId);
+        // console.log(this.bookId);
       })
       .catch(err => {
         console.log('lesbooks détails ne marchent pas', err);
