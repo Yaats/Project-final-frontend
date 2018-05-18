@@ -22,6 +22,8 @@ export class EventService {
       .toPromise();
   }
 
+  // get events details
+
   getEventDetails(eventId) {
     return this.apiEvent
       .get(`${environment.backUrl}/event-detail/${eventId}`)

@@ -23,50 +23,14 @@
 
     </label>
     <br>
-
+    <br>
     <div>
-      <h4>❤️ Please pick your interests so we can show you a selection that is 100% made for you 👍</h4>
+      <h4 align="center">❤️ Please pick your interests so we can show you a selection that is 100% made for you 👍</h4>
       <br>
-      <p>I enjoy
-        <b>TV shows</b> that :</p>
-
-      <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsSerie(35)" name="interestedInSerie[0]" id="comedyTvShows" value="comedyTvShows"> Make me laugh my ass off
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsSerie(18)" name="interestedInSerie[1]" id="dramaTvShows" value="dramaTvShows"> Make me cry like a river
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsSerie(53)" name="interestedInSerie[2]" id="thrillerTvShows" value="thrillerTvShows"> Have an exciting plot (involving crime or espionage)
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsSerie(27)" name="interestedInSerie[3]" id="scaryTvShows" value="scaryTvShows"> Make me scared
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsSerie(28)" name="interestedInSerie[4]" id="actionTvShows" value="actionTvShows"> Have a huge amount of fireshots and/or spectacular car chases
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsSerie(878)" name="interestedInSerie[5]" id="fantasyTvShows" value="fantasyTvShows"> Have weird stuff happening like magic trolls or supernatural events
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsSerie(37)" name="interestedInSerie[6]" id="westernTvShows" value="westernTvShows"> Includes cowboys and lots of cactus
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsSerie(10749)" name="interestedInSerie[7]" id="loveTvShows" value="loveTvShows"> All I need is love
-      </label>
-
-
-      <br>
-
-      <p>I enjoy
-        <b>movies</b> that :</p>
+      <div class="titlee">
+        <p>I enjoy
+          <b>movies</b> that :</p>
+      </div>
 
       <label class="btn btn-info">
         <input type="checkbox" (change)="updateInterests(35)" name="interestedIn[8]" id="comedyMovies" value="comedyMovies"> Make me laugh my ass off
@@ -102,35 +66,52 @@
 
 
       <br>
+      <br>
+      <div class="titlee">
+        <p>I enjoy
+          <b>TV shows</b> that :</p>
+      </div>
 
-      <p>I enjoy
-        <b>books</b> like :</p>
 
       <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsBook('drama')" name="interestedInBook[16]" id="sadBook" value="sadBook"> The one that tell sad stories
+        <input type="checkbox" (change)="updateInterestsSerie(35)" name="interestedInSerie[0]" id="comedyTvShows" value="comedyTvShows"> Make me laugh my ass off
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsBook('thrillers')" name="interestedInBook[17]" id="policeBook" value="policeBook"> The one where someone is muredered and we have to find who did it
+        <input type="checkbox" (change)="updateInterestsSerie(18)" name="interestedInSerie[1]" id="dramaTvShows" value="dramaTvShows"> Make me cry like a river
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsBook('love')" name="interestedInBook[18]" id="loveBook" value="loveBook"> The one that finish happily ever after
+        <input type="checkbox" (change)="updateInterestsSerie(53)" name="interestedInSerie[2]" id="thrillerTvShows" value="thrillerTvShows"> Have an exciting plot (involving crime or espionage)
       </label>
 
       <label class="btn btn-info">
-        <input type="checkbox" (change)="updateInterestsBook('biography')" name="interestedInBook[19]" id="bioBook" value="bioBook"> The one that tell true story about someone
+        <input type="checkbox" (change)="updateInterestsSerie(27)" name="interestedInSerie[3]" id="scaryTvShows" value="scaryTvShows"> Make me scared
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterestsSerie(28)" name="interestedInSerie[4]" id="actionTvShows" value="actionTvShows"> Have a huge amount of fireshots and/or spectacular car chases
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterestsSerie(878)" name="interestedInSerie[5]" id="fantasyTvShows" value="fantasyTvShows"> Have weird stuff happening like magic trolls or supernatural events
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterestsSerie(37)" name="interestedInSerie[6]" id="westernTvShows" value="westernTvShows"> Includes cowboys and lots of cactus
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterestsSerie(10749)" name="interestedInSerie[7]" id="loveTvShows" value="loveTvShows"> All I need is love
       </label>
 
 
       <br>
-
-
-
       <br>
-
-      <p>I like
-        <b>events</b> in Paris such as :</p>
+      <div class="titlee">
+        <p>I like
+          <b>events</b> in Paris such as :</p>
+      </div>
 
       <label class="btn btn-info">
         <input type="checkbox" (change)="updateInterestsEvent(1)" name="interestedInEvent[21]" id="festivEvents" value="festivEvents"> Going to a festival, flea-market or exhibition
@@ -152,10 +133,35 @@
         <input type="checkbox" (change)="updateInterestsEvent(5)" name="interestedInEvent[25]" id="animationEvents" value="animationEvents"> Participate to a conference, lecture, meeting, visit..
       </label>
 
+
+      <br>
       <br>
 
+      <div class="titlee">
+        <p>I enjoy
+          <b>books</b> like :</p>
+      </div>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterestsBook('drama')" name="interestedInBook[16]" id="sadBook" value="sadBook"> The one that tell sad stories
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterestsBook('thrillers')" name="interestedInBook[17]" id="policeBook" value="policeBook"> The one where someone is muredered and we have to find who did it
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterestsBook('love')" name="interestedInBook[18]" id="loveBook" value="loveBook"> The one that finish happily ever after
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" (change)="updateInterestsBook('biography')" name="interestedInBook[19]" id="bioBook" value="bioBook"> The one that tell true story about someone
+      </label>
+
+      <br>
+      <br>
     </div>
-    <button class="btn btn-success">Sign in</button>
+    <button class="btn btn-success btn-lg">Sign in</button>
   </div>
 </form>
 

@@ -1,24 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-footer {
-  background: rgba(0,0,0,.6);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30px;
-  text-align: center;
-  color: #ccc;
-  text-decoration: none;
-  padding-top: 7px;
-}
 
-footer p {
-  line-height: 100%;
-}
-
-footer  a {
-  color: #ccc;
-}
 body {
   padding: 20px;
   font-family: 'Source Sans Pro', sans-serif;
