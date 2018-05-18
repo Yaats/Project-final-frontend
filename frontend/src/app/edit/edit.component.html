@@ -5,57 +5,12 @@
 <form (ngSubmit)="update()">
   <div class="form-group">
     <div>
-      <h4>❤️ Please pick your interests so we can show you a selection that is 100% made for you 👍</h4>
+      <h4 align="center">❤️ Please pick your interests so we can show you a selection that is 100% made for you 👍</h4>
       <br>
-      <p>I like
-        <b>TV shows</b> that :</p>
-
-      <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedInSerie.includes(35)" (change)="updateProfileSerie(35)" name="interestedInSerie[0]"
-          id="comedyTvShows" value="comedyTvShows"> Make me laugh my ass off
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedInSerie.includes(18)" (change)="updateProfileSerie(18)" name="interestedInSerie[1]"
-          id="dramaTvShows" value="dramaTvShows"> Make me cry like a river
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedInSerie.includes(53)" (change)="updateProfileSerie(53)" name="interestedInSerie[10]"
-          id="thrillerTvShows" value="thrillerTvShows"> Have an exciting plot (involving crime or espionage)
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedInSerie.includes(27)" (change)="updateProfileSerie(27)" name="interestedInSerie[11]"
-          id="scaryTvShows" value="scaryTvShows"> Make me scared
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedInSerie.includes(28)" (change)="updateProfileSerie(28)" name="interestedInSerie[12]"
-          id="actionTvShows" value="actionTvShows"> Have a huge amount of fireshots and/or spectacular car chases
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedInSerie.includes(878)" (change)="updateProfileSerie(878)" name="interestedInSerie[15]"
-          id="fantasyTvShows" value="fantasyTvShows"> Where we can see weird stuff happening like magic trolls or supernatural events
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedInSerie.includes(37)" (change)="updateProfileSerie(37)" name="interestedInSerie[16]"
-          id="westernTvShows" value="westernTvShows"> Includes cowboys and lots of cactus
-      </label>
-
-      <label class="btn btn-info">
-        <input type="checkbox" [checked]="creds.interestedInSerie.includes(10749)" (change)="updateProfileSerie(10749)" name="interestedInSerie[18]"
-          id="loveTvShows" value="loveTvShows"> All I need is love
-      </label>
-
-
-
-      <br>
-
-      <p>I like
-        <b>movies</b> that :</p>
+      <div class="titlee">
+        <p>I enjoy
+          <b>movies</b> that :</p>
+      </div>
 
       <label class="btn btn-info">
         <input type="checkbox" [checked]="creds.interestedIn.includes(35)" (change)="updateProfile(35)" name="interestedIn[2]" id="comedyMovies"
@@ -84,7 +39,7 @@
 
       <label class="btn btn-info">
         <input type="checkbox" [checked]="creds.interestedIn.includes(878)" (change)="updateProfile(878)" name="interestedIn[14]"
-          id="fantasyMovies" value="fantasyMovies"> Where we can see weird stuff happening like magic trolls or supernatural events
+          id="fantasyMovies" value="fantasyMovies"> Have weird stuff happening like magic trolls or supernatural events
       </label>
 
       <label class="btn btn-info">
@@ -97,9 +52,64 @@
           id="loveMovies" value="loveMovies"> All I need is love
       </label>
       <br>
+      <br>
+      <div class="titlee">
 
-      <p>I like
-        <b>events</b> in Paris such as :</p>
+        <p>I enjoy
+          <b>TV shows</b> that :</p>
+      </div>
+
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(35)" (change)="updateProfileSerie(35)" name="interestedInSerie[0]"
+          id="comedyTvShows" value="comedyTvShows"> Make me laugh my ass off
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(18)" (change)="updateProfileSerie(18)" name="interestedInSerie[1]"
+          id="dramaTvShows" value="dramaTvShows"> Make me cry like a river
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(53)" (change)="updateProfileSerie(53)" name="interestedInSerie[10]"
+          id="thrillerTvShows" value="thrillerTvShows"> Have an exciting plot (involving crime or espionage)
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(27)" (change)="updateProfileSerie(27)" name="interestedInSerie[11]"
+          id="scaryTvShows" value="scaryTvShows"> Make me scared
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(28)" (change)="updateProfileSerie(28)" name="interestedInSerie[12]"
+          id="actionTvShows" value="actionTvShows"> Have a huge amount of fireshots and/or spectacular car chases
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(878)" (change)="updateProfileSerie(878)" name="interestedInSerie[15]"
+          id="fantasyTvShows" value="fantasyTvShows"> Have weird stuff happening like magic trolls or supernatural events
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(37)" (change)="updateProfileSerie(37)" name="interestedInSerie[16]"
+          id="westernTvShows" value="westernTvShows"> Includes cowboys and lots of cactus
+      </label>
+
+      <label class="btn btn-info">
+        <input type="checkbox" [checked]="creds.interestedInSerie.includes(10749)" (change)="updateProfileSerie(10749)" name="interestedInSerie[18]"
+          id="loveTvShows" value="loveTvShows"> All I need is love
+      </label>
+
+
+
+      <br>
+      <br>
+
+      <div class="titlee">
+
+        <p>I like
+          <b>events</b> in Paris such as :</p>
+      </div>
 
       <label class="btn btn-info">
         <input type="checkbox" [checked]="creds.interestedInEvent.includes(1)" (change)="updateProfileEvent(1)" name="interestedInEvent[4]"
@@ -128,9 +138,12 @@
 
       <br>
 
+      <br>
+      <div class="titlee">
 
-      <p>I enjoy
-        <b>books</b> like :</p>
+        <p>I enjoy
+          <b>books</b> like :</p>
+      </div>
 
       <label class="btn btn-info">
         <input type="checkbox" [checked]="creds.interestedInBook.includes('drama')" (change)="updateProfileBook('drama')" name="interestedInBook[16]"
@@ -153,7 +166,7 @@
       </label>
 
 
-      <button class="btn btn-success">Update my Profile</button>
+      <button class="btn btn-success btn-lg">Update my Profile</button>
     </div>
   </div>
 </form>

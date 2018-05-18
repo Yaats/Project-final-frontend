@@ -1,8 +1,6 @@
 <div class="scroll">
   <div *ngIf="userServ.currentUser">
 
-
-
     <ul>
       <li *ngFor="let oneList of list">
         <span *ngIf="oneList.user == userServ.currentUser._id">
@@ -45,6 +43,4 @@
       </li>
     </ul>
 
-
   </div>
-</div>
