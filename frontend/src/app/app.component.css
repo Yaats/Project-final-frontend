@@ -16,6 +16,8 @@ body {
 
 nav {
   background: rgba(0, 0, 0, .4);
+  padding: .2em .9em;
+  padding-top: 15px;
 }
 
 .dropdown-menu {
@@ -56,4 +58,23 @@ footer .ali {
 
 footer  a {
   color: #ccc;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-dark[_ngcontent-c0] .navbar-nav[_ngcontent-c0] .nav-link[_ngcontent-c0]:hover {
+  color: grey;
+}
+
+.zoom {
+  transition: transform .2s; /* Animation */
+  width: auto;
+  height: 7vh;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }

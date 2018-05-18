@@ -1,37 +1,38 @@
+<br> <br>
 <div class="scroll">
   <div *ngIf="userServ.currentUser">
 
     <ul>
       <li *ngFor="let oneList of list">
-        <span *ngIf="oneList.user == userServ.currentUser._id">
+        <span *ngIf="oneList.user == userServ.currentUser._id" class="card" style="width: 13rem;">
           <!-- <p>{{oneList.category}}</p> -->
 
           <span *ngIf="oneList.category == 'movie'">
             <h2>{{oneList.details.name}}</h2>
-            <h2>{{oneList.details.title}}</h2>
+            <h3>{{oneList.details.title}}</h3>
             <p>{{oneList.category | uppercase}}</p>
             <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}">
             <p>Added to my list on : {{oneList.createdAt | date }}</p>
           </span>
 
+          
+          <span *ngIf="oneList.category == 'tv-show'">
+            <h2>{{oneList.details.name}}</h2>
+            <h3>{{oneList.details.title}}</h3>
+            <p>{{oneList.category | uppercase}}</p>
+            <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}">
+            <p>Added to my list on : {{oneList.createdAt | date }}</p>
+          </span>
+          
           <span *ngIf="oneList.category == 'book'">
-            <h2>{{oneList.details.title}}</h2>
+            <h3>{{oneList.details.title}}</h3>
             <p>{{oneList.category | uppercase}}</p>
             <img *ngIf="oneList.details?.thumbnail" src="{{oneList.details.thumbnail}}">
             <p>Added to my list on : {{oneList.createdAt | date }}</p>
           </span>
 
-          <span *ngIf="oneList.category == 'tv-show'">
-            <h2>{{oneList.details.name}}</h2>
-            <h2>{{oneList.details.title}}</h2>
-            <p>{{oneList.category | uppercase}}</p>
-            <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}">
-            <p>Added to my list on : {{oneList.createdAt | date }}</p>
-          </span>
-
-
           <span *ngIf="oneList.category == 'event'">
-            <h2>{{oneList.details.nom}}</h2>
+            <h3>{{oneList.details.nom}}</h3>
             <p>{{oneList.category | uppercase }}</p>
 
             <!-- <img *ngIf="oneList.details?.poster_path" src="http://image.tmdb.org/t/p/w185/{{oneList.details.poster_path}}"> -->
