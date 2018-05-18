@@ -32,14 +32,28 @@ export class HomepageComponent implements OnInit {
     this.userServ
       .check()
       .then(() => {
-        this.creds.interestedIn = this.userServ.currentUser.interestedIn;
-        this.creds.interestedInEvent = this.userServ.currentUser.interestedInEvent;
-        this.creds.interestedInSerie = this.userServ.currentUser.interestedInSerie;
-        this.creds.interestedInBook = this.userServ.currentUser.interestedInBook;
-        this.getMRecos();
-        this.getSRecos();
-        this.getERecos();
-        this.getBRecos();
+        if (this.userServ.currentUser) {
+          this.creds.interestedIn = this.userServ.currentUser.interestedIn;
+          this.creds.interestedInEvent = this.userServ.currentUser.interestedInEvent;
+          this.creds.interestedInSerie = this.userServ.currentUser.interestedInSerie;
+          this.creds.interestedInBook = this.userServ.currentUser.interestedInBook;
+          this.getMRecos();
+          this.getSRecos();
+          this.getERecos();
+          this.getBRecos();
+        }
+        else {
+          this.apiTrac
+            .getListEvent()
+              .then((response: any) => {
+                console.log("get ALL list")
+                this.events = response.data;
+              })
+              .catch(err => {
+                console.log('pas de db ?? ', err);
+              });
+        }
+
       })
       .catch(err => {
         console.log('app login error', err);
@@ -51,15 +65,6 @@ export class HomepageComponent implements OnInit {
       .getListMovie()
       .then((response: any) => {
         this.movies = response.results;
-      })
-      .catch(err => {
-        console.log('pas de db ?? ', err);
-      });
-
-    this.apiTrac
-      .getListEvent()
-      .then((response: any) => {
-        this.events = response.data;
       })
       .catch(err => {
         console.log('pas de db ?? ', err);
@@ -112,6 +117,7 @@ export class HomepageComponent implements OnInit {
     this.apiTrac
       .getEventReco()
       .then((response: any) => {
+        console.log("get RECOS list")
         this.eventsReco = response.data;
       })
       .catch(err => {
